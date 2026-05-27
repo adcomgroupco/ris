@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIS - Plan de acción Meta Ads</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #FFC000;
+      --black: #111111;
+      --white: #ffffff;
+      --gray: #6b6b6b;
+      --soft: #f6f6f6;
+      --line: rgba(17, 17, 17, .1);
+      --green: #16a34a;
+      --amber: #f59e0b;
+      --red: #dc2626;
+      --radius: 8px;
+      --shadow: 0 20px 60px rgba(0, 0, 0, .08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 192, 0, .18), transparent 30%),
+        linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
+      color: var(--black);
+      line-height: 1.55;
+      padding: 32px 22px 56px;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(255, 255, 255, .9);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 38px;
+      margin-bottom: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: end;
+      overflow: hidden;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      right: -80px;
+      top: -110px;
+      background: rgba(255, 192, 0, .22);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      background: var(--yellow);
+      color: var(--black);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 10px 16px;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: .98;
+      text-transform: uppercase;
+      max-width: 760px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-meta {
+      text-align: right;
+      color: var(--gray);
+      font-size: 13px;
+      min-width: 220px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-meta strong {
+      color: var(--black);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--black);
+      color: var(--yellow);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .metric {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      border-left: 5px solid var(--yellow);
+      padding: 20px;
+      min-height: 120px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .045);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--black);
+      font-size: 32px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    section {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, .045);
+      padding: 24px;
+      margin-bottom: 22px;
+    }
+
+    h2 {
+      color: var(--black);
+      font-size: 18px;
+      margin-bottom: 14px;
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      background: var(--yellow);
+      display: inline-flex;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: var(--black);
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+      font-size: 13px;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 13px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--yellow);
+      background: var(--black);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    tr:nth-child(even) td {
+      background: var(--soft);
+    }
+
+    .right { text-align: right; }
+
+    .tag {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tag.green { background: var(--black); color: var(--yellow); }
+    .tag.amber { background: #fff4c4; color: var(--black); border: 1px solid var(--yellow); }
+    .tag.blue { background: var(--yellow); color: var(--black); }
+    .tag.red { background: #fee2e2; color: #991b1b; }
+
+    .action-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .action {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 12px;
+      background: var(--soft);
+      border-left: 5px solid var(--yellow);
+    }
+
+    .num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--yellow);
+      background: var(--black);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .action p { margin: 0; }
+
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .creative {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: var(--soft);
+      border-top: 5px solid var(--yellow);
+    }
+
+    .creative small {
+      display: inline-block;
+      color: var(--gray);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 8px;
+    }
+
+    .note {
+      border-left: 6px solid var(--yellow);
+      background: var(--black);
+      padding: 16px 18px;
+      color: var(--white);
+      border-radius: var(--radius);
+      font-weight: 400;
+    }
+
+    footer {
+      color: var(--gray);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 900px) {
+      header, .grid { grid-template-columns: 1fr; }
+      .header-meta { text-align: left; }
+      .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .creative-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      body { padding: 18px 12px 36px; }
+      header, section { padding: 18px; }
+      .summary { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <div class="eyebrow">RIS · Meta Ads · Solicitud de crédito</div>
+        <h1>Plan de acción breve para mejorar resultados de solicitudes</h1>
+      </div>
+      <div class="header-meta">
+        <strong>Fuente:</strong> Clarity + lectura de campañas<br />
+        <strong>Ventana Clarity:</strong> últimos 3 días<br />
+        <strong>Fecha:</strong> 26 de mayo de 2026
+        <br />
+        <a class="back-link" href="./index.html">Volver al inicio</a>
+      </div>
+    </header>
+
+    <div class="summary">
+      <article class="metric">
+        <strong>261</strong>
+        <span>Sesiones desde Meta en campaña "Solicitud crédito".</span>
+      </article>
+      <article class="metric">
+        <strong>47,9%</strong>
+        <span>Scroll promedio de la campaña de solicitud.</span>
+      </article>
+      <article class="metric">
+        <strong>6,15%</strong>
+        <span>Sesiones con dead clicks en solicitud.</span>
+      </article>
+      <article class="metric">
+        <strong>0%</strong>
+        <span>Rage clicks relevantes detectados en Meta.</span>
+      </article>
+    </div>
+
+    <div class="grid">
+      <div>
+        <section>
+          <h2>Ajustes ejecutados en Meta</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Elemento</th>
+                  <th>Antes</th>
+                  <th>Después</th>
+                  <th>Objetivo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inicio inscripción</td>
+                  <td>$50.000/día</td>
+                  <td>$30.000/día</td>
+                  <td>Liberar presupuesto para solicitud directa.</td>
+                </tr>
+                <tr>
+                  <td>Solicitud crédito</td>
+                  <td>$70.000/día</td>
+                  <td>$90.000/día</td>
+                  <td>Escalar la campaña con mayor intención comercial.</td>
+                </tr>
+                <tr>
+                  <td>Interacciones</td>
+                  <td>Activa</td>
+                  <td>Pausada</td>
+                  <td>Reducir gasto de bajo aporte a solicitud.</td>
+                </tr>
+                <tr>
+                  <td>Reactivación</td>
+                  <td>Pausada</td>
+                  <td>Activa · $10.000/día</td>
+                  <td>Recuperar usuarios con señal previa.</td>
+                </tr>
+                <tr>
+                  <td>Creativos de Solicitud crédito</td>
+                  <td>8 piezas activas revisadas</td>
+                  <td>4 piezas pausadas, 4 piezas activas</td>
+                  <td>Concentrar entrega en anuncios con mejor respuesta.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Diagnóstico</h2>
+          <p>
+            La campaña de solicitud de crédito ya concentra tráfico con intención, pero el comportamiento
+            en sitio muestra baja profundidad de scroll frente a la campaña de inicio de inscripción.
+            Esto sugiere que Meta debe empujar con más claridad el beneficio, el paso siguiente y la
+            confianza desde el anuncio, antes de depender de que el usuario explore la página.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Campaña Meta</th>
+                  <th class="right">Sesiones</th>
+                  <th class="right">Páginas / sesión</th>
+                  <th class="right">Scroll</th>
+                  <th class="right">Dead clicks</th>
+                  <th>Lectura</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inicio inscripción</td>
+                  <td class="right">335</td>
+                  <td class="right">1,16</td>
+                  <td class="right">67,8%</td>
+                  <td class="right">8,38%</td>
+                  <td>Mayor exploración, útil para remarketing y educación.</td>
+                </tr>
+                <tr>
+                  <td>Solicitud crédito</td>
+                  <td class="right">261</td>
+                  <td class="right">1,28</td>
+                  <td class="right">47,9%</td>
+                  <td class="right">6,15%</td>
+                  <td>Intención directa, pero necesita piezas más claras y segmentación más cerrada.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Plan de acción</h2>
+          <div class="action-list">
+            <article class="action">
+              <div class="num">1</div>
+              <div>
+                <h3>Reordenar campañas por etapa de decisión</h3>
+                <p>
+                  Separar en Meta tres frentes: prospecting para educar sobre el crédito, remarketing a
+                  visitantes e interacciones, y conversión enfocada en solicitud. La campaña de solicitud
+                  debe recibir usuarios con mayor señal previa, no solo tráfico frío.
+                </p>
+              </div>
+            </article>
+            <article class="action">
+              <div class="num">2</div>
+              <div>
+                <h3>Redistribuir presupuesto por señal de intención</h3>
+                <p>
+                  Mantener presupuesto de aprendizaje en prospecting, pero mover progresivamente inversión
+                  hacia audiencias que visitaron cupo fijo, interactuaron con anuncios, reprodujeron video
+                  o regresaron al sitio. Revisar cada 48 horas CPL, tasa de solicitud y calidad comercial.
+                </p>
+              </div>
+            </article>
+            <article class="action">
+              <div class="num">3</div>
+              <div>
+                <h3>Revisar y renovar creativos activos</h3>
+                <p>
+                  Auditar piezas por formato, gancho, promesa, claridad del CTA y consistencia con crédito.
+                  Pausar creativos con alta frecuencia y baja conversión; dejar activos los que generen
+                  solicitudes o avances reales, no solo clics.
+                </p>
+              </div>
+            </article>
+            <article class="action">
+              <div class="num">4</div>
+              <div>
+                <h3>Crear pruebas A/B desde plataforma</h3>
+                <p>
+                  Probar variaciones por ángulo: aprobación rápida, facilidad del proceso, cupo disponible,
+                  compra en comercios aliados y confianza en RIS. Cada test debe correr con una sola variable
+                  principal para identificar qué mensaje mueve solicitudes.
+                </p>
+              </div>
+            </article>
+            <article class="action">
+              <div class="num">5</div>
+              <div>
+                <h3>Activar remarketing táctico</h3>
+                <p>
+                  Crear conjuntos para visitantes de los últimos 7, 14 y 30 días; usuarios que llegaron al
+                  simulador; personas que hicieron clic pero no solicitaron; e interacciones con Instagram
+                  y Facebook. Mensaje: retomar solicitud, resolver dudas y reforzar beneficio.
+                </p>
+              </div>
+            </article>
+            <article class="action">
+              <div class="num">6</div>
+              <div>
+                <h3>Optimizar ubicaciónes y dispositivo</h3>
+                <p>
+                  Revisar desglose por dispositivo, ubicación y plataforma. Priorizar mobile si concentra
+                  solicitudes, pero excluir ubicaciónes con clic barato sin avance. Separar Stories/Reels
+                  de Feed si el comportamiento o CPL difiere.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section>
+          <h2>Acciónes creativas</h2>
+          <div class="creative-grid">
+            <article class="creative">
+              <small>Video corto</small>
+              <h3>15 segundos con beneficio frontal</h3>
+              <p>Primer cuadro: "Solicita tu crédito RIS". Cerrar con CTA visual y promesa concreta.</p>
+            </article>
+            <article class="creative">
+              <small>Testimonio</small>
+              <h3>Confianza y uso real</h3>
+              <p>Mostrar caso de uso: compra, aprobación o facilidad del proceso desde celular.</p>
+            </article>
+            <article class="creative">
+              <small>Carrusel</small>
+              <h3>Pasos simples</h3>
+              <p>Tarjetas: solicita, valida, usa tu crédito. Ideal para bajar incertidumbre.</p>
+            </article>
+            <article class="creative">
+              <small>Remarketing</small>
+              <h3>Retoma tu solicitud</h3>
+              <p>Mensaje directo para quienes ya visitaron cupo fijo o hicieron clic en anuncios previos.</p>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <h2>Creativos pausados</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Anuncio</th>
+                  <th>Motivo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Estático CREDITOS 3_20/05</td>
+                  <td>Gasto reciente sin acciones de conversión registradas.</td>
+                </tr>
+                <tr>
+                  <td>Video RevisaresFacil_01/04</td>
+                  <td>Gasto reciente sin acciones de conversión registradas.</td>
+                </tr>
+                <tr>
+                  <td>Video HayqueResolver_01/04</td>
+                  <td>Gasto reciente sin acciones de conversión registradas.</td>
+                </tr>
+                <tr>
+                  <td>Video Decidir_01/04</td>
+                  <td>Sin aporte medible en la ventana revisada.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Priorización</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Acción</th>
+                  <th>Prioridad</th>
+                  <th>Impacto esperado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Auditoría de creativos</td>
+                  <td><span class="tag green">Alta</span></td>
+                  <td>Mejor CTR calificado y tasa de solicitud.</td>
+                </tr>
+                <tr>
+                  <td>Remarketing 7/14/30 días</td>
+                  <td><span class="tag green">Alta</span></td>
+                  <td>Recuperar usuarios con intención previa.</td>
+                </tr>
+                <tr>
+                  <td>Pruebas A/B de mensajes</td>
+                  <td><span class="tag blue">Media</span></td>
+                  <td>Identificar ángulo ganador.</td>
+                </tr>
+                <tr>
+                  <td>Control de frecuencia</td>
+                  <td><span class="tag amber">Media</span></td>
+                  <td>Evitar fatiga y encarecimiento.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section>
+          <h2>Validación con Clarity</h2>
+          <p>
+            Usar Clarity como lectura de calidad post-clic: scroll, dead clicks, quickbacks y recorridos por
+            campaña. La señal clave es si los usuarios de Meta avanzan hacia páginas o eventos de solicitud,
+            no solo si aterrizan en la página.
+          </p>
+          <div class="note">
+            Revisión sugerida: comparar cada semana la campaña "Solicitud crédito" contra "Inicio inscripción"
+            para decidir si se escala presupuesto, se cambia creatividad o se refuerza remarketing.
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      Informe preparado para seguimiento operativo de Meta Ads RIS. No incluye credenciales ni datos personales.
+    </footer>
+  </main>
+</body>
+</html>
+
