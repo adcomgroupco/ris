@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RIS · Plan de choque</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/ris-reportes.css">
+<style>
+  .steps { display: grid; gap: 14px; }
+  .step { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 16px; padding: 18px 22px; display: grid; gap: 8px; }
+  .step .when { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .step h3 { font-size: 17px; }
+  .step ul { padding-left: 18px; display: grid; gap: 4px; font-size: 14px; }
+  .step.main { border-left-width: 8px; background: var(--accent-soft); }
+  .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .flow .box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 6px; }
+  .flow .box b { font-size: 24px; font-variant-numeric: tabular-nums; }
+  .flow .box.out { border-style: dashed; }
+  .flow .box .tag { margin-bottom: 2px; }
+  .flow .box p { font-size: 13px; color: var(--muted); }
+  .check { list-style: none; padding: 0; display: grid; gap: 8px; }
+  .check li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; font-size: 14px; display: grid; grid-template-columns: 110px 1fr; gap: 12px; }
+  .check li b { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  @media (max-width: 560px) { .check li { grid-template-columns: 1fr; gap: 2px; } }
+  .bars { display: grid; gap: 12px; }
+  .bar { display: grid; grid-template-columns: 150px 1fr; align-items: center; gap: 12px; font-size: 14px; }
+  .bar .track { display: flex; align-items: center; gap: 10px; }
+  .bar .fill { height: 22px; border-radius: 0 4px 4px 0; background: #63635E; min-width: 4px; }
+  .bar.hi .fill { background: var(--accent); }
+  .bar .val { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .bar .val small { font-weight: 400; color: var(--muted); }
+  .bar:hover .fill { filter: brightness(.85); }
+  @media (max-width: 560px) { .bar { grid-template-columns: 1fr; gap: 4px; } }
+  .prio { counter-reset: p; display: grid; gap: 14px; }
+  .prio .step h3::before { counter-increment: p; content: counter(p) ". "; color: var(--muted); }
+  .owner { justify-self: start; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: var(--head); color: var(--accent); border-radius: 99px; padding: 2px 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="back" href="index.html">← Todos los documentos</a>
+  <div class="brand"><i></i>ADCOM <span class="sep">×</span> RIS</div>
+  <h1>Plan de choque <span>octubre 2026</span></h1>
+  <p>En octubre comprobamos con los datos de RIS que, en Meta, cada peso adicional rinde menos: al duplicar la inversión diaria los desembolsos no crecieron. Ya optimizamos lo que depende de nosotros. Para seguir creciendo necesitamos abrir nuevos medios y trabajar con RIS sobre la aprobación y el proceso de solicitud.</p>
+</header>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Diagnóstico</p>
+    <h2>Por qué un plan de choque</h2>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><b>$19.274</b><span>Costo por solicitud en Meta, 1 al 13 de oct. En el mismo periodo de septiembre fue $12.948 (+49%).</span></div>
+    <div class="kpi"><b>×3,5</b><span>Subida del presupuesto diario de Solicitud de crédito el 5 de oct: de $141.000 a $500.000.</span></div>
+    <div class="kpi"><b>57%</b><span>De las 5.184 solicitudes que recibió RIS del 1 al 13 de oct fueron negadas. 3 de cada 4 negaciones fueron por score.</span></div>
+    <div class="kpi"><b>1</b><span>Solo un conjunto de anuncios recibía toda la inversión de Solicitud de crédito, con frecuencia de 3,9.</span></div>
+  </div>
+  <div class="panel">
+    <p><b>Qué estaba pasando:</b> con más presupuesto sobre el mismo público, Meta tuvo que pagar cada solicitud adicional a cerca de $28.000. La tasa de clics bajó de 6,4% a 5,6% y la conversión de clic a solicitud bajó de 3,5% a 2,8%, señales de que el público y los anuncios se estaban desgastando.</p>
+    <p><b>El problema de fondo:</b> Meta optimiza para conseguir <i>solicitudes</i>, pero no sabe cuáles se aprueban. Por eso seguía mostrando anuncios a perfiles muy parecidos a los que RIS termina negando.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Con los datos de RIS</p>
+    <h2>A más inversión, cada crédito cuesta más</h2>
+  </div>
+  <div class="panel">
+    <p>En publicidad digital se cumple la <b>ley de rendimientos decrecientes</b>: los primeros pesos llegan a las personas con más intención y salen baratos. A medida que se invierte más en el mismo canal, Meta tiene que buscar personas menos interesadas, y cada resultado adicional cuesta más que el anterior. El costo promedio sube despacio, pero el de la <i>siguiente</i> conversión se dispara.</p>
+    <p>El 5 de octubre se subió el presupuesto, lo que permite comparar con el reporte de RIS los días con inversión baja (1 al 4 de oct) y alta (6 al 13 de oct).</p>
+  </div>
+  <div class="panel">
+    <h3>Cuánto creció cada resultado diario al subir la inversión</h3>
+    <p class="note">Promedio por día, 6–13 de oct frente a 1–4 de oct.</p>
+    <div class="bars" role="img" aria-label="Inversión diaria +127%, solicitudes +40%, viables +27%, desembolsos +2%">
+      <div class="bar hi" title="Inversión en Meta por día: $280.924 → $638.138"><span>Inversión en Meta</span><div class="track"><div class="fill" style="width:100%"></div><span class="val">+127% <small>$281 K → $638 K</small></span></div></div>
+      <div class="bar" title="Solicitudes con cuenta creada por día: 278 → 390"><span>Solicitudes</span><div class="track"><div class="fill" style="width:31.5%"></div><span class="val">+40% <small>278 → 390</small></span></div></div>
+      <div class="bar" title="Solicitudes viables en Experian por día: 25,8 → 32,8"><span>Viables (Experian)</span><div class="track"><div class="fill" style="width:21.3%"></div><span class="val">+27% <small>25,8 → 32,8</small></span></div></div>
+      <div class="bar" title="Créditos desembolsados por día: 9,2 → 9,4"><span>Desembolsos</span><div class="track"><div class="fill" style="width:1.6%"></div><span class="val">+2% <small>9,2 → 9,4</small></span></div></div>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Costo de cada resultado</th><th>1–4 oct · inversión baja</th><th>6–13 oct · inversión alta</th><th>Cambio</th></tr></thead>
+      <tbody>
+        <tr><td>Por solicitud</td><td>$1.011</td><td>$1.638</td><td>+62%</td></tr>
+        <tr><td>Por solicitud viable</td><td>$10.910</td><td>$19.485</td><td>+79%</td></tr>
+        <tr><td>Por desembolso*</td><td>$30.370</td><td>$68.068</td><td>+124%</td></tr>
+        <tr class="hi"><td>Cada viable <b>adicional</b></td><td colspan="2">≈ $51.000, casi 5 veces el costo con inversión baja</td><td>×4,7</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Fuente: reporte de solicitudes de crédito digital de RIS (cuentas creadas, 1 al 13 de octubre) e inversión diaria en Meta. El 5 de octubre se excluye por ser día de transición. Las solicitudes incluyen todos los orígenes, aunque Meta es el único medio pagado activo. *Los desembolsos de los últimos días aún pueden aumentar mientras terminan su proceso, así que el costo por desembolso es preliminar.</p>
+  <div class="panel">
+    <p><b>Qué significa para RIS:</b> poner más presupuesto en Meta trae más solicitudes, pero casi no trae más créditos. La siguiente etapa de crecimiento no está en subir Meta, sino en <b>sumar medios nuevos</b>, donde los primeros pesos vuelven a ser baratos, y en <b>convertir mejor las solicitudes que ya llegan</b>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Prioridades</p>
+    <h2>Lo que necesitamos mover con RIS</h2>
+  </div>
+  <div class="prio">
+    <div class="step main">
+      <span class="owner">Prioridad · ADCOM + RIS</span>
+      <h3>Propuesta de medios adicionales</h3>
+      <ul>
+        <li>Llevar a RIS una propuesta para repartir la inversión entre Meta y medios nuevos, en lugar de seguir subiendo solo Meta.</li>
+        <li>Empezar por canales con intención de búsqueda, donde la persona ya está buscando un crédito, y complementar con video y remarketing en otras plataformas.</li>
+        <li>Mantener Meta en el rango donde todavía es eficiente y destinar el crecimiento del presupuesto a los canales nuevos.</li>
+        <li>Objetivo: presentar la propuesta antes de cerrar octubre para arrancar en noviembre.</li>
+      </ul>
+    </div>
+    <div class="step">
+      <span class="owner">RIS · Riesgo y producto</span>
+      <h3>Aprobación: 2 de cada 3 solicitudes se niegan</h3>
+      <ul>
+        <li>2.982 de las 4.571 solicitudes con cuenta creada fueron negadas; 2.303 de ellas por score.</li>
+        <li>154 se negaron por monto mínimo: ¿se les puede ofrecer un monto menor en lugar de negarlas?</li>
+        <li>¿Existe un producto o condición para perfiles de score medio? Cada negado es inversión que ya se pagó.</li>
+        <li>Compartir los criterios de aprobación para orientar mejor los públicos y los mensajes.</li>
+      </ul>
+    </div>
+    <div class="step">
+      <span class="owner">RIS · Proceso digital</span>
+      <h3>Fricción: solicitudes que se pierden en el camino</h3>
+      <ul>
+        <li>613 personas empezaron y no terminaron de crear la cuenta.</li>
+        <li>De los viables, 103 dejaron expirar la validación de identidad y 82 la cancelaron.</li>
+        <li>RIS puede contactarlos directamente (WhatsApp, SMS, correo) sin costo de pauta, mientras el remarketing los impacta en Meta.</li>
+        <li>Revisar la experiencia de la validación de identidad: tiempo de expiración, recordatorios y ayudas para la foto del documento.</li>
+      </ul>
+    </div>
+    <div class="step">
+      <span class="owner">RIS · Datos</span>
+      <h3>Información para que Meta aprenda qué es un buen cliente</h3>
+      <ul>
+        <li>Enviar el reporte de solicitudes cada semana, o idealmente automatizarlo.</li>
+        <li>Habilitar el envío de los eventos “viable” y “desembolso” a Meta como conversiones, para optimizar hacia créditos y no solo hacia solicitudes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Acción principal · 18 de octubre</p>
+    <h2>La base de RIS, conectada a Meta</h2>
+  </div>
+  <div class="panel">
+    <p>Con el reporte de solicitudes de crédito digital que envió RIS (1 al 13 de octubre) creamos cuatro públicos en Meta. Cada persona quedó en un solo grupo. Los datos se cifraron antes de enviarse, así que Meta no recibe correos ni celulares legibles. No subimos a las 16 personas que no autorizaron el tratamiento de sus datos.</p>
+  </div>
+  <div class="flow">
+    <div class="box out">
+      <span class="tag off">Excluir</span>
+      <b>2.992</b>
+      <h3>Solicitudes no aptas</h3>
+      <p>Negadas por Experian (2.982) y 10 viables con alertas en la validación de identidad. Ya no les mostramos anuncios.</p>
+    </div>
+    <div class="box out">
+      <span class="tag off">Excluir</span>
+      <b>120</b>
+      <h3>Clientes desembolsados</h3>
+      <p>Ya recibieron su crédito. No tiene sentido invitarlos a solicitar de nuevo.</p>
+    </div>
+    <div class="box">
+      <span class="tag">Remarketing</span>
+      <b>1.443</b>
+      <h3>Cuenta creada</h3>
+      <p>Crearon cuenta y no terminaron: 1.192 sin decisión de Experian y 251 viables que se quedaron en la validación de identidad o el desembolso.</p>
+    </div>
+    <div class="box">
+      <span class="tag">Remarketing</span>
+      <b>613</b>
+      <h3>Cuenta pendiente</h3>
+      <p>Empezaron la solicitud pero no completaron la creación de la cuenta.</p>
+    </div>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <span class="tag">Exclusión</span>
+      <h3>Menos inversión en perfiles que no aprueban</h3>
+      <p>Los públicos de exclusión quedaron aplicados en los 6 conjuntos activos: los 2 de Solicitud de crédito y los 4 de Inicio de inscripción.</p>
+    </article>
+    <article class="card">
+      <span class="tag">Nueva campaña</span>
+      <h3>7. Remarketing CRM · Solicitud de crédito</h3>
+      <p>Dos conjuntos de $15.000 diarios, uno por público, cada uno solo para su lista. Usa los dos Reels con mejor resultado: “Paso a paso” y “¿Necesitas plata?”.</p>
+    </article>
+    <article class="card">
+      <span class="tag">Los más cercanos</span>
+      <h3>185 viables a un paso del desembolso</h3>
+      <p>Pasaron Experian pero la validación de identidad expiró por inactividad (103) o la cancelaron (82). Son la oportunidad más rápida de convertir en crédito.</p>
+    </article>
+  </div>
+  <p class="note">Los anuncios hablan del producto, no de la persona: nunca mencionan que conocemos su solicitud o su situación financiera, como piden las políticas de Meta.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Presupuesto</p>
+    <h2>Ajuste a $14 M en octubre</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Campaña</th><th>Hasta el 15 oct</th><th>15 oct</th><th>Desde el 18 oct</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>4. Solicitud de crédito</td><td>$500.000</td><td>$260.000</td><td>$230.000</td></tr>
+        <tr><td>3. Inicio de inscripción</td><td>$132.000</td><td>$132.000</td><td>$132.000</td></tr>
+        <tr class="hi"><td>7. Remarketing CRM (nueva)</td><td>—</td><td>—</td><td>$30.000</td></tr>
+        <tr><td>6. Engagement</td><td>$0 (sin entrega)</td><td>Apagada</td><td>Apagada</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td>Total diario</td><td>$632.000</td><td>$392.000</td><td>$392.000</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <p class="note">Al 17 de octubre se llevaban $8,42 M invertidos. Quedan $5,58 M para 14 días, unos $398.000 diarios, así que el cierre estimado es de $13,9 M a $14 M. Al ritmo anterior, octubre habría cerrado cerca de $18 M. Valores diarios en pesos colombianos.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Paso a paso</p>
+    <h2>Todas las acciones</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="when">15 de octubre · Presupuesto</span>
+      <h3>Freno a la sobreinversión</h3>
+      <ul>
+        <li>Solicitud de crédito bajó de $500.000 a $260.000 diarios para cerrar el mes en $14 M.</li>
+        <li>Se apagó la campaña Engagement, que estaba activa sin entregar desde que terminó el concurso de Amor y Amistad.</li>
+      </ul>
+    </div>
+    <div class="step">
+      <span class="when">15 de octubre · Anuncios</span>
+      <h3>Pausa de los anuncios más costosos (últimos 7 días)</h3>
+      <ul>
+        <li><b>Estático CRÉDITOS 1</b> en el conjunto de mujeres: $28.039 por solicitud, el más alto de la campaña.</li>
+        <li><b>Reel paso a paso (copia)</b> en el conjunto Finanzas de Inicio de inscripción: $1.115 por inicio, 31% más que el promedio.</li>
+        <li>Se volvieron a publicar 13 videos de Inicio de inscripción que Meta tenía frenados. Los errores desaparecieron.</li>
+      </ul>
+    </div>
+    <div class="step">
+      <span class="when">15 de octubre · Conjuntos y públicos</span>
+      <h3>Más de un público para Solicitud de crédito</h3>
+      <ul>
+        <li>Se reactivó el conjunto <b>Lookalike BD Experian</b> (hombres y mujeres), que en septiembre logró solicitudes entre $10.000 y $15.000.</li>
+        <li>En el conjunto de mujeres se sugirió a Meta la edad de 20 a 44 años. Entre 45 y 64 años cada solicitud costaba de $31.000 a $73.000; entre 18 y 24, $15.500.</li>
+      </ul>
+    </div>
+    <div class="step main">
+      <span class="when">18 de octubre · Base de RIS</span>
+      <h3>Exclusión y remarketing con la base de solicitudes</h3>
+      <ul>
+        <li>Cuatro públicos nuevos en Meta a partir del reporte de RIS (ver arriba).</li>
+        <li>Negados y clientes excluidos de todos los conjuntos activos.</li>
+        <li>Nueva campaña de remarketing para cuenta creada y cuenta pendiente, financiada con $30.000 que salen de Solicitud de crédito.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Seguimiento</p>
+    <h2>Qué sigue y cómo lo medimos</h2>
+  </div>
+  <ul class="check">
+    <li><b>Prioridad</b><span>Presentar a RIS la propuesta de medios adicionales antes de cerrar octubre, para arrancar en noviembre.</span></li>
+    <li><b>Con RIS</b><span>Sesión con riesgo y producto sobre aprobación (score, monto mínimo) y con el equipo digital sobre la fricción en la creación de cuenta y la validación de identidad.</span></li>
+    <li><b>20–22 oct</b><span>Revisar cuántas personas de cada lista encontró Meta y el costo por solicitud del remarketing. Si el público de cuenta pendiente queda muy pequeño, unir los dos conjuntos.</span></li>
+    <li><b>20 oct</b><span>Comparar los dos conjuntos de Solicitud de crédito. Si el general rinde mejor, aplicarle también la edad sugerida de 20 a 44 años.</span></li>
+    <li><b>Cada semana</b><span>RIS envía el reporte de solicitudes actualizado y lo cargamos a los mismos cuatro públicos. Así la exclusión y el remarketing no se quedan desactualizados.</span></li>
+    <li><b>Pendiente RIS</b><span>Confirmar por escrito que la autorización que firman los clientes cubre el uso de sus datos en publicidad y el envío a Meta (Ley 1581 de Habeas Data).</span></li>
+    <li><b>Pendiente RIS</b><span>Revisar el método de pago de la cuenta publicitaria, que entró varias veces en periodo de gracia y puede cortar la entrega.</span></li>
+    <li><b>Pendiente técnico</b><span>Corregir las reglas de los públicos del sitio web, que hoy tienen unas 20 personas pese a los miles de visitas registradas.</span></li>
+    <li><b>Creatividad</b><span>Producir piezas nuevas: cada conjunto quedó con 2 o 3 anuncios activos y el desgaste llega rápido.</span></li>
+    <li><b>Siguiente paso</b><span>Enviar a Meta las solicitudes viables y los desembolsos como conversión, y crear un público similar a partir de ellos. Así Meta aprende a buscar personas con más probabilidad de aprobación, no solo de solicitar.</span></li>
+  </ul>
+</section>
+
+<footer>ADCOM · RIS · Plan de choque · Actualizado el 18 de octubre de 2026</footer>
+</div>
+</body>
+</html>
