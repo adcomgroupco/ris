@@ -15,7 +15,7 @@
   .step ul { padding-left: 18px; display: grid; gap: 4px; font-size: 14px; }
   .step.main { border-left-width: 8px; background: var(--accent-soft); }
   .flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-  .flow .box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 6px; }
+  .flow .box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 6px; align-content: start; }
   .flow .box b { font-size: 24px; font-variant-numeric: tabular-nums; }
   .flow .box.out { border-style: dashed; }
   .flow .box .tag { margin-bottom: 2px; }
@@ -114,6 +114,7 @@
         <li>Ya presentamos a RIS la propuesta para repartir la inversión entre Meta y medios nuevos, en lugar de seguir subiendo solo Meta. <b>Está pendiente de su aprobación.</b></li>
         <li>Empezar por canales con intención de búsqueda, donde la persona ya está buscando un crédito, y complementar con video y remarketing en otras plataformas.</li>
         <li>Mantener Meta en el rango donde todavía es eficiente y destinar el crecimiento del presupuesto a los canales nuevos.</li>
+        <li><b>Primer paso:</b> de los $14 M de octubre separamos $1 M para Google, con la meta de salir antes de cerrar el mes.</li>
         <li>Si RIS la aprueba antes de cerrar octubre, los nuevos medios pueden arrancar en noviembre.</li>
       </ul>
     </div>
@@ -142,6 +143,7 @@
       <h3>Información para que Meta aprenda qué es un buen cliente</h3>
       <ul>
         <li>Enviar el reporte de solicitudes cada semana, o idealmente automatizarlo.</li>
+        <li>Vamos a subir a Meta la base de los clientes que sí sirven (viables y desembolsados) como señal de buen cliente, y a crear un público similar (Lookalike) a partir de ella.</li>
         <li>Habilitar el envío de los eventos “viable” y “desembolso” a Meta como conversiones, para optimizar hacia créditos y no solo hacia solicitudes.</li>
       </ul>
     </div>
@@ -199,31 +201,40 @@
       <p>Pasaron Experian pero la validación de identidad expiró por inactividad (103) o la cancelaron (82). Son la oportunidad más rápida de convertir en crédito.</p>
     </article>
   </div>
+  <div class="step main">
+    <span class="when">Siguiente paso · Señal de buen cliente</span>
+    <h3>Base de clientes que sí sirven y Lookalike</h3>
+    <ul>
+      <li>Vamos a subir a Meta la base de los clientes que RIS aprueba: viables en Experian y desembolsados. Al 13 de octubre son unas 370 personas (120 desembolsados y 251 viables), y la base crece con cada reporte semanal.</li>
+      <li>Con esa base Meta recibe la señal de cómo es un buen cliente de RIS, no solo de quién llena la solicitud.</li>
+      <li>A partir de ella crearemos un público similar (Lookalike) para Solicitud de crédito, que reemplace o acompañe al Lookalike actual, hecho con una base general de Experian.</li>
+    </ul>
+  </div>
   <p class="note">Los anuncios hablan del producto, no de la persona: nunca mencionan que conocemos su solicitud o su situación financiera, como piden las políticas de Meta.</p>
 </section>
 
 <section class="section">
   <div class="section-head">
     <p class="eyebrow">Presupuesto</p>
-    <h2>Ajuste a $14 M en octubre</h2>
+    <h2>Octubre: $13 M en Meta y $1 M para Google</h2>
   </div>
   <div class="table-wrap">
     <table>
       <thead>
-        <tr><th>Campaña</th><th>Hasta el 15 oct</th><th>15 oct</th><th>Desde el 18 oct</th></tr>
+        <tr><th>Campaña</th><th>Hasta el 15 oct</th><th>15 oct</th><th>18 oct</th><th>Desde el 21 oct</th></tr>
       </thead>
       <tbody>
-        <tr><td>4. Solicitud de crédito</td><td>$500.000</td><td>$260.000</td><td>$230.000</td></tr>
-        <tr><td>3. Inicio de inscripción</td><td>$132.000</td><td>$132.000</td><td>$132.000</td></tr>
-        <tr class="hi"><td>7. Remarketing CRM (nueva)</td><td>—</td><td>—</td><td>$30.000</td></tr>
-        <tr><td>6. Engagement</td><td>$0 (sin entrega)</td><td>Apagada</td><td>Apagada</td></tr>
+        <tr><td>4. Solicitud de crédito</td><td>$500.000</td><td>$260.000</td><td>$230.000</td><td>$165.000</td></tr>
+        <tr><td>3. Inicio de inscripción</td><td>$132.000</td><td>$132.000</td><td>$132.000</td><td>$100.000</td></tr>
+        <tr class="hi"><td>7. Remarketing CRM (nueva)</td><td>—</td><td>—</td><td>$30.000</td><td>$30.000</td></tr>
+        <tr><td>6. Engagement</td><td>$0 (sin entrega)</td><td>Apagada</td><td>Apagada</td><td>Apagada</td></tr>
       </tbody>
       <tfoot>
-        <tr><td>Total diario</td><td>$632.000</td><td>$392.000</td><td>$392.000</td></tr>
+        <tr><td>Total diario</td><td>$632.000</td><td>$392.000</td><td>$392.000</td><td>$295.000</td></tr>
       </tfoot>
     </table>
   </div>
-  <p class="note">Al 17 de octubre se llevaban $8,42 M invertidos. Quedan $5,58 M para 14 días, unos $398.000 diarios, así que el cierre estimado es de $13,9 M a $14 M. Valores diarios en pesos colombianos.</p>
+  <p class="note">El presupuesto de octubre sigue en $14 M: $13 M para Meta y $1 M para Google. Al 20 de octubre se llevaban $9,72 M invertidos en Meta; quedan $3,28 M para 11 días, y con $295.000 diarios Meta cierra cerca de $12,97 M. Valores diarios en pesos colombianos.</p>
 </section>
 
 <section class="section">
@@ -265,6 +276,14 @@
         <li>Nueva campaña de remarketing para cuenta creada y cuenta pendiente, financiada con $30.000 que salen de Solicitud de crédito.</li>
       </ul>
     </div>
+    <div class="step">
+      <span class="when">21 de octubre · Presupuesto</span>
+      <h3>Meta a $13 M y $1 M para Google</h3>
+      <ul>
+        <li>Solicitud de crédito bajó de $230.000 a $165.000 diarios e Inicio de inscripción de $132.000 a $100.000. El remarketing sigue en $30.000.</li>
+        <li>El $1 M que se libera se destina a Google, como primer paso de los medios adicionales.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -275,6 +294,8 @@
   </div>
   <ul class="check">
     <li><b>Pendiente RIS</b><span>Aprobar la propuesta de medios adicionales, que ya presentamos. Con la aprobación antes de cerrar octubre, los nuevos medios arrancan en noviembre.</span></li>
+    <li><b>Antes del 31 oct</b><span>Lanzar Google con $1 M y medir el costo por solicitud frente a Meta.</span></li>
+    <li><b>Esta semana</b><span>Subir a Meta la base de clientes que sí sirven (viables y desembolsados) y crear el Lookalike a partir de ella.</span></li>
     <li><b>Con RIS</b><span>Sesión con riesgo y producto sobre aprobación (score, monto mínimo) y con el equipo digital sobre la fricción en la creación de cuenta y la validación de identidad.</span></li>
     <li><b>20–22 oct</b><span>Revisar cuántas personas de cada lista encontró Meta y el costo por solicitud del remarketing. Si el público de cuenta pendiente queda muy pequeño, unir los dos conjuntos.</span></li>
     <li><b>20 oct</b><span>Comparar los dos conjuntos de Solicitud de crédito. Si el general rinde mejor, aplicarle también la edad sugerida de 20 a 44 años.</span></li>
@@ -283,11 +304,11 @@
     <li><b>Pendiente RIS</b><span>Revisar el método de pago de la cuenta publicitaria, que entró varias veces en periodo de gracia y puede cortar la entrega.</span></li>
     <li><b>Pendiente técnico</b><span>Corregir las reglas de los públicos del sitio web, que hoy tienen unas 20 personas pese a los miles de visitas registradas.</span></li>
     <li><b>Creatividad</b><span>Producir piezas nuevas: cada conjunto quedó con 2 o 3 anuncios activos y el desgaste llega rápido.</span></li>
-    <li><b>Siguiente paso</b><span>Enviar a Meta las solicitudes viables y los desembolsos como conversión, y crear un público similar a partir de ellos. Así Meta aprende a buscar personas con más probabilidad de aprobación, no solo de solicitar.</span></li>
+    <li><b>Siguiente paso</b><span>Enviar a Meta las solicitudes viables y los desembolsos como conversión. Así Meta aprende a buscar personas con más probabilidad de aprobación, no solo de solicitar.</span></li>
   </ul>
 </section>
 
-<footer>ADCOM · RIS · Plan de choque · Actualizado el 18 de octubre de 2026</footer>
+<footer>ADCOM · RIS · Plan de choque · Actualizado el 21 de octubre de 2026</footer>
 </div>
 </body>
 </html>
