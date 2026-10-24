@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RIS · Funnel de desembolsos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/ris-reportes.css">
+<style>
+  .delta { font-size: 13px; font-weight: 600; }
+  .up { color: #1E7B34; } .down { color: #B3261E; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  .sw-sep { background: #B9B9B3; } .sw-oct { background: #141414; }
+  .pairs { display: grid; gap: 14px; }
+  .pair { display: grid; grid-template-columns: 170px 1fr; gap: 12px; align-items: center; font-size: 14px; }
+  .pair.hi { background: var(--accent-soft); border-radius: 12px; padding: 8px; margin: -8px; }
+  .pair .rows { display: grid; gap: 4px; }
+  .pair .r { display: flex; align-items: center; gap: 8px; }
+  .pair .b { height: 14px; border-radius: 0 4px 4px 0; min-width: 3px; }
+  .pair .b.sep { background: #B9B9B3; } .pair .b.oct { background: #141414; }
+  .pair .v { font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .pair .r:hover .b { filter: brightness(.85); }
+  .wf { display: grid; gap: 10px; }
+  .wf .row { display: grid; grid-template-columns: 200px 1fr 64px; gap: 12px; align-items: center; font-size: 14px; }
+  .wf .track { position: relative; height: 22px; background: var(--panel); border-radius: 4px; }
+  .wf .seg { position: absolute; top: 0; bottom: 0; border-radius: 4px; }
+  .wf .tot { background: #141414; } .wf .pos { background: #1E7B34; } .wf .neg { background: #B3261E; }
+  .wf .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .wf .row:hover .seg { filter: brightness(.85); }
+  .split { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .split .table-wrap table { min-width: 0; }
+  .split.fronts { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+  .front { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 16px; padding: 18px 22px; display: grid; gap: 8px; align-content: start; }
+  .front h3 { font-size: 17px; }
+  .front p { font-size: 14px; color: var(--muted); }
+  .front .who { justify-self: start; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; background: var(--head); color: var(--accent); border-radius: 99px; padding: 2px 10px; }
+  @media (max-width: 560px) {
+    .pair, .wf .row { grid-template-columns: 1fr; gap: 4px; }
+    .wf .num { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="back" href="index.html">← Todos los documentos</a>
+  <div class="brand"><i></i>ADCOM <span class="sep">×</span> RIS</div>
+  <h1>Funnel de desembolsos <span>oct vs sep</span></h1>
+  <p>Del 1 al 13 de octubre llegaron más solicitudes y más viables que en el mismo periodo de septiembre, pero menos de esos viables terminaron en crédito. El reto ya no es solo generar solicitudes: es lograr que más usuarios viables terminen el proceso.</p>
+</header>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Resumen · días 1 al 13</p>
+    <h2>Más solicitudes, misma viabilidad, menos créditos por cohorte</h2>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><b>4.278</b><span>Solicitudes con ID · <span class="delta up">+14,8%</span> frente a 3.725 en septiembre</span></div>
+    <div class="kpi"><b>360</b><span>Viables en Experian · <span class="delta up">+13,6%</span>. La tasa de viabilidad sube de 9,1% a 9,3%</span></div>
+    <div class="kpi"><b>34,4%</b><span>De los viables aprueba identidad · <span class="delta down">−9,1 pp</span> frente a 43,5%</span></div>
+    <div class="kpi"><b>112</b><span>Créditos desembolsados de esas solicitudes · <span class="delta down">−16,4%</span> frente a 134</span></div>
+  </div>
+  <div class="panel">
+    <p><b>Lo que sí crece es la caja:</b> en estos días se pagaron <b>118 créditos (+11,3%)</b> por <b>$75,6 M (+9,2%)</b>, porque incluyen solicitudes de septiembre que se desembolsaron en octubre. Pero de las solicitudes que <i>entraron</i> en octubre salen menos créditos: la conversión de solicitud a pago baja de 3,60% a 2,62%.</p>
+    <p class="note">Octubre todavía está en proceso: 12 usuarios con identidad aprobada aún no figuran como desembolsados, 11 de ellos pendientes o en proceso. Cuando se paguen, la cohorte de octubre mejora.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Funnel</p>
+    <h2>Dónde se pierden los usuarios</h2>
+  </div>
+  <div class="panel">
+    <h3>Porcentaje que avanza desde la etapa anterior</h3>
+    <div class="legend"><span><i class="sw-sep"></i>Sep 1–13</span><span><i class="sw-oct"></i>Oct 1–13</span></div>
+    <div class="pairs" role="img" aria-label="Conversión por etapa, septiembre frente a octubre">
+      <div class="pair"><span>Solicitud con ID</span><div class="rows">
+        <div class="r" title="Septiembre: 86,4%"><div class="b sep" style="width:86.4%"></div><span class="v">86,4%</span></div>
+        <div class="r" title="Octubre: 89,3%"><div class="b oct" style="width:89.3%"></div><span class="v">89,3%</span></div></div></div>
+      <div class="pair"><span>OTP validado</span><div class="rows">
+        <div class="r" title="Septiembre: 93,9%"><div class="b sep" style="width:93.9%"></div><span class="v">93,9%</span></div>
+        <div class="r" title="Octubre: 90,1%"><div class="b oct" style="width:90.1%"></div><span class="v">90,1%</span></div></div></div>
+      <div class="pair"><span>Viable en Experian</span><div class="rows">
+        <div class="r" title="Septiembre: 9,1%"><div class="b sep" style="width:9.1%"></div><span class="v">9,1%</span></div>
+        <div class="r" title="Octubre: 9,3%"><div class="b oct" style="width:9.3%"></div><span class="v">9,3%</span></div></div></div>
+      <div class="pair hi"><span><b>Identidad aprobada</b></span><div class="rows">
+        <div class="r" title="Septiembre: 43,5%"><div class="b sep" style="width:43.5%"></div><span class="v">43,5%</span></div>
+        <div class="r" title="Octubre: 34,4%"><div class="b oct" style="width:34.4%"></div><span class="v"><b>34,4%</b></span></div></div></div>
+      <div class="pair"><span>Desembolso</span><div class="rows">
+        <div class="r" title="Septiembre: 97,1%"><div class="b sep" style="width:97.1%"></div><span class="v">97,1%</span></div>
+        <div class="r" title="Octubre: 90,3%"><div class="b oct" style="width:90.3%"></div><span class="v">90,3%</span></div></div></div>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Etapa</th><th>Sep 1–13</th><th>Oct 1–13</th><th>Avance sep</th><th>Avance oct</th><th>Cambio</th></tr></thead>
+      <tbody>
+        <tr><td>Intentos registrados</td><td>4.312</td><td>4.789</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td>Solicitudes con ID</td><td>3.725</td><td>4.278</td><td>86,4%</td><td>89,3%</td><td>+2,9 pp</td></tr>
+        <tr><td>OTP validado</td><td>3.498</td><td>3.855</td><td>93,9%</td><td>90,1%</td><td>−3,8 pp</td></tr>
+        <tr><td>Viable en Experian</td><td>317</td><td>360</td><td>9,1%</td><td>9,3%</td><td>+0,3 pp</td></tr>
+        <tr class="hi"><td>Identidad aprobada</td><td>138</td><td>124</td><td>43,5%</td><td>34,4%</td><td>−9,1 pp</td></tr>
+        <tr><td>Créditos desembolsados</td><td>134</td><td>112</td><td>97,1%</td><td>90,3%</td><td>−6,8 pp</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Lectura del cambio</p>
+    <h2>De 134 a 112 créditos: qué sumó y qué restó</h2>
+  </div>
+  <div class="panel">
+    <div class="wf" role="img" aria-label="Descomposición de los créditos desembolsados de 134 a 112">
+      <div class="row" title="Créditos desembolsados de la cohorte septiembre 1–13"><span>Septiembre 1–13</span><div class="track"><div class="seg tot" style="left:0;width:83.75%"></div></div><span class="num">134</span></div>
+      <div class="row" title="Efecto de recibir más solicitudes"><span>Más solicitudes</span><div class="track"><div class="seg pos" style="left:83.75%;width:12.44%"></div></div><span class="num up">+19,9</span></div>
+      <div class="row" title="Efecto de la menor validación de OTP"><span>Menor validación OTP</span><div class="track"><div class="seg neg" style="left:92.31%;width:3.88%"></div></div><span class="num down">−6,2</span></div>
+      <div class="row" title="Efecto de la mejor viabilidad en Experian"><span>Mejor viabilidad Experian</span><div class="track"><div class="seg pos" style="left:92.31%;width:2.81%"></div></div><span class="num up">+4,5</span></div>
+      <div class="row" title="Efecto de la menor aprobación de identidad"><span><b>Menor aprobación de identidad</b></span><div class="track"><div class="seg neg" style="left:75.25%;width:19.88%"></div></div><span class="num down"><b>−31,8</b></span></div>
+      <div class="row" title="Efecto del menor desembolso final"><span>Menor desembolso final</span><div class="track"><div class="seg neg" style="left:70%;width:5.25%"></div></div><span class="num down">−8,4</span></div>
+      <div class="row" title="Créditos desembolsados de la cohorte octubre 1–13"><span>Octubre 1–13</span><div class="track"><div class="seg tot" style="left:0;width:70%"></div></div><span class="num">112</span></div>
+    </div>
+  </div>
+  <p class="note">El volumen de solicitudes y la viabilidad sumaron unos 24 créditos; la validación de identidad restó casi 32. La descomposición es descriptiva: muestra el peso de cada etapa, pero no prueba causas. Escala de 0 a 160 créditos.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Fricciones</p>
+    <h2>Por qué no pasan la validación de identidad</h2>
+  </div>
+  <div class="split">
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Identidad de los viables</th><th>Sep</th><th>Oct</th><th>% oct</th></tr></thead>
+        <tbody>
+          <tr><td>Aprobada</td><td>138</td><td>124</td><td>34,4%</td></tr>
+          <tr class="hi"><td>Rechazada</td><td>145</td><td>193</td><td>53,6%</td></tr>
+          <tr><td>Pendiente</td><td>34</td><td>41</td><td>11,4%</td></tr>
+          <tr><td>Pendiente con firma de documentos</td><td>0</td><td>2</td><td>0,6%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Motivo del rechazo</th><th>Sep</th><th>Oct</th><th>% oct</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td>Expiró por inactividad</td><td>62</td><td>84</td><td>43,5%</td></tr>
+          <tr class="hi"><td>Cancelado</td><td>57</td><td>72</td><td>37,3%</td></tr>
+          <tr><td>No autorizó tratamiento de datos</td><td>17</td><td>16</td><td>8,3%</td></tr>
+          <tr><td>Otros motivos</td><td>9</td><td>21</td><td>10,9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel">
+    <p><b>El 80,8% de los rechazos de identidad en octubre (156 de 193) son por expiración o cancelación.</b> No son créditos negados ni fraude: son personas que ya pasaron Experian y abandonaron el proceso. Es la oportunidad más grande para subir desembolsos sin traer una sola solicitud más.</p>
+    <p><b>El OTP también pierde usuarios:</b> las solicitudes con ID que no validan el código subieron de <b>227 a 423</b>.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Contexto</p>
+    <h2>La viabilidad no es el problema</h2>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Periodo</th><th>Solicitudes</th><th>Viables</th><th>Desemb. cohorte</th><th>Conv. total</th><th>Pagos por fecha</th><th>Monto por fecha</th></tr></thead>
+      <tbody>
+        <tr><td>Agosto 2026 · completo</td><td>7.146</td><td>613</td><td>224</td><td>3,13%</td><td>223</td><td>$150,2 M</td></tr>
+        <tr><td>Septiembre 2026 · completo</td><td>7.706</td><td>650</td><td>272</td><td>3,53%</td><td>273</td><td>$181,7 M</td></tr>
+        <tr><td>Septiembre 1–13</td><td>3.725</td><td>317</td><td>134</td><td>3,60%</td><td>106</td><td>$69,3 M</td></tr>
+        <tr class="hi"><td>Octubre 1–13</td><td>4.278</td><td>360</td><td>112</td><td>2,62%</td><td>118</td><td>$75,6 M</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">La viabilidad se mantiene cerca del 9% desde agosto. Entre los negados, el 77% es por score (2.171 en octubre), seguido de cartera castigada (257) y monto mínimo (136). Octubre es parcial y no debe compararse con meses completos.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Plan conjunto</p>
+    <h2>Cuatro frentes para que más viables terminen en crédito</h2>
+  </div>
+  <div class="split fronts">
+    <div class="front">
+      <span class="who">RIS · Producto digital</span>
+      <h3>1. Recuperar usuarios viables</h3>
+      <p>Revisar las pantallas y pasos donde ocurren las expiraciones y cancelaciones. Diseñar reingreso seguro y recordatorios autorizados (WhatsApp, SMS, correo) para los viables que no terminaron.</p>
+    </div>
+    <div class="front">
+      <span class="who">RIS · Tecnología</span>
+      <h3>2. Auditar el OTP</h3>
+      <p>Los errores de OTP casi se duplican (227 → 423). Revisar la entrega de los códigos, los tiempos de expiración y los reintentos.</p>
+    </div>
+    <div class="front">
+      <span class="who">RIS · Operaciones</span>
+      <h3>3. Desembolsos pendientes</h3>
+      <p>Dar seguimiento a los 12 usuarios de octubre con identidad aprobada que aún no figuran como desembolsados (11 pendientes o en proceso).</p>
+    </div>
+    <div class="front">
+      <span class="who">ADCOM + RIS · Medición</span>
+      <h3>4. Medir por cohortes y por medio</h3>
+      <p>Conectar el funnel con los medios digitales para medir el costo por solicitud, por viable y por crédito desembolsado. Hoy la base no trae identificadores de campaña ni UTM.</p>
+    </div>
+  </div>
+  <div class="panel">
+    <p><b>Lo que ADCOM ya está haciendo desde los medios:</b> remarketing en Meta a los usuarios con cuenta creada y pendiente; exclusión de los perfiles negados; un público similar construido con los 656 clientes desembolsados; y el envío a Meta de cada desembolso como señal, para que aprenda a buscar personas que terminan en crédito y no solo que solicitan.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Metodología</p>
+    <h2>Cómo leer estas cifras</h2>
+  </div>
+  <div class="panel">
+    <p class="note"><b>Fuente:</b> base de solicitudes de RIS con corte al 13 de octubre de 2026. Se comparan días idénticos (1 al 13) de septiembre y octubre. <b>Cohorte:</b> créditos desembolsados de las solicitudes que entraron en el periodo. <b>Pagos por fecha:</b> créditos desembolsados en esos días, aunque la solicitud haya empezado antes. <b>Avance:</b> personas de una etapa sobre las de la etapa anterior. Un OTP de firma emitido no se toma como firma completada. Las cifras son agregadas: el informe no incluye datos personales.</p>
+  </div>
+</section>
+
+<footer>ADCOM · RIS · Funnel de desembolsos · Actualizado el 24 de octubre de 2026</footer>
+</div>
+</body>
+</html>
