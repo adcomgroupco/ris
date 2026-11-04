@@ -6,6 +6,7 @@ Sitio de consulta de reportes, propuestas y plan de acción de Meta Ads para RIS
 
 - `index.html`: página principal.
 - `reporte-semanal.html`: reporte semanal de Meta con filtro de fechas, frente a las metas del flow.
+- `ruta-750-desembolsos.html`: ruta a 750 desembolsos de noviembre 2026: cierre de octubre, cuello de botella en identidad, escenarios, Google y remarketing, compromisos ADCOM y RIS.
 - `plan-de-choque.html`: plan de choque de octubre 2026: rendimientos decrecientes, prioridades con RIS y acciones en Meta.
 - `funnel-desembolsos.html`: funnel de desembolsos octubre vs septiembre (días 1–13) y plan conjunto con RIS.
 - `flow-general.html`: propuesta del flow general de medios, octubre 2026 a junio 2027.
