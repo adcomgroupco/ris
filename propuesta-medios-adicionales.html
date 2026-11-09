@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>RIS · Propuesta de medios adicionales</title>
+<meta name="description" content="Propuesta de ADCOM para sumar Google Search y TikTok a la pauta de RIS con presupuesto adicional, sin tocar Meta: por qué, objetivo de CPA, flow de medios de prueba y estado actual.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/ris-reportes.css">
+<style>
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+  .medios { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+  .medio { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 16px; padding: 18px 20px; display: grid; gap: 8px; align-content: start; }
+  .medio h3 { font-size: 17px; }
+  .medio p, .medio li { font-size: 14px; color: var(--muted); }
+  .medio ul { padding-left: 18px; display: grid; gap: 4px; }
+  .estado { justify-self: start; font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; border-radius: 99px; padding: 2px 10px; background: var(--panel); color: var(--muted); border: 1px solid var(--line); }
+  .estado.on { background: #E3F2E6; color: #1E7B34; border-color: #CDE6D2; }
+  .estado.wait { background: var(--accent-soft); color: #8A6A00; border-color: transparent; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  td.kpi-p { background: var(--accent-soft); font-weight: 600; }
+  tr.tot td { font-weight: 600; border-top: 2px solid var(--line); }
+  .split { display: flex; height: 34px; border-radius: 10px; overflow: hidden; font-size: 12px; font-weight: 600; }
+  .split span { display: flex; align-items: center; justify-content: center; white-space: nowrap; overflow: hidden; padding: 0 6px; }
+  .pasos { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; counter-reset: p; }
+  .pasos li { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; font-size: 14px; color: var(--muted); counter-increment: p; }
+  .pasos li::before { content: counter(p); display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; font-size: 12px; margin-bottom: 8px; }
+  .pasos b { display: block; color: var(--ink); font-size: 15px; margin-bottom: 2px; }
+  .proy { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; align-items: end; height: 180px; border-bottom: 1px solid var(--line); padding-top: 22px; }
+  .proy div { position: relative; background: #B9B9B3; border-radius: 4px 4px 0 0; }
+  .proy div.real { background: var(--ink); }
+  .proy span { position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .xl { display: grid; grid-template-columns: repeat(9, 1fr); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
+  .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+  @media (max-width: 600px) { .proy span { font-size: 10px; } .proy, .xl { gap: 3px; } .xl { font-size: 10px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <a class="back" href="index.html">← Todos los documentos</a>
+  <div class="brand"><i></i>ADCOM <span class="sep">×</span> RIS</div>
+  <h1>Propuesta de medios adicionales <span>Google Search y TikTok · presentada en julio de 2026</span></h1>
+  <p>RIS pauta solo en Meta. Propusimos sumar Google Search para capturar a quien ya busca un crédito y TikTok para llegar a un público que Meta no está alcanzando, con presupuesto adicional y sin mover un peso de lo que hoy funciona en Meta.</p>
+  <p><a class="btn ghost" href="propuesta-medios-presentacion.html" target="_blank" rel="noopener">Ver la presentación original</a></p>
+</header>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Estado a noviembre</p>
+    <h2>Google Search ya está al aire; TikTok sigue pendiente</h2>
+  </div>
+  <div class="medios">
+    <div class="medio">
+      <span class="estado on">Activo desde el 9 nov</span>
+      <h3>Google Search</h3>
+      <p>Aprobado e implementado como campaña de solicitud de crédito: 5 grupos, 29 palabras clave y $136.000 al día (unos $3 M en noviembre).</p>
+      <p><a href="implementacion-google-search-2026-11-06.html">Ver la implementación</a></p>
+    </div>
+    <div class="medio">
+      <span class="estado wait">Pendiente de aprobación</span>
+      <h3>TikTok Infeed</h3>
+      <p>Video vertical hacia el sitio, comprado por clic. Es la línea de tráfico y descubrimiento del flow.</p>
+    </div>
+    <div class="medio">
+      <span class="estado wait">Pendiente de aprobación</span>
+      <h3>TikTok Search</h3>
+      <p>Anuncios en los resultados de búsqueda de TikTok, comprados por impresiones, sobre la misma audiencia de intención.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">El reto</p>
+    <h2>Por qué salir de un solo medio</h2>
+  </div>
+  <div class="two">
+    <div class="panel">
+      <p><b>El 100% de la inversión está en Meta.</b> Eso limita el público disponible y deja la cuenta en manos de un solo algoritmo, un solo formato y una sola subasta.</p>
+      <p>Meta capta muy bien la demanda por interrupción (quien está haciendo scroll), pero no a la persona que <b>ya está buscando</b> un crédito. Tampoco hay hoy un canal de video corto nativo, el formato que domina el consumo digital en Colombia.</p>
+    </div>
+    <div class="panel">
+      <p><b>Google Search</b> captura la intención de búsqueda de mayor valor: «crédito rápido», «préstamo online», «simulador de crédito» y la defensa de la marca frente a competidores que pauten sobre «RIS».</p>
+      <p><b>TikTok</b> suma alcance incremental y contenido nativo. Funciona como tope de embudo: quien descubre la marca en TikTok la busca después en Google.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Universo digital · Colombia 2026</p>
+    <h2>Dónde está el público</h2>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><b>41,7 M</b><span>Usuarios de internet · 77,8% de la población</span></div>
+    <div class="kpi"><b>37,7 M</b><span>Alcance publicitario de TikTok (18+) · +24,9% en un año</span></div>
+    <div class="kpi"><b>36,4 M</b><span>Alcance publicitario de Facebook · +0,7% en un año</span></div>
+    <div class="kpi"><b>79,3%</b><span>De los usuarios de internet usa buscadores cada mes</span></div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Plataforma</th><th class="n">Usuarios</th><th class="n">% población</th><th class="n">Crecimiento anual</th></tr></thead>
+      <tbody>
+        <tr><td>TikTok (18+)</td><td class="n">37,7 M</td><td class="n">93% de los adultos</td><td class="n"><b>+24,9%</b></td></tr>
+        <tr><td>Facebook</td><td class="n">36,4 M</td><td class="n">67,9%</td><td class="n">+0,7%</td></tr>
+        <tr><td>YouTube</td><td class="n">31,0 M</td><td class="n">57,9%</td><td class="n">+1,3%</td></tr>
+        <tr><td>Instagram</td><td class="n">21,6 M</td><td class="n">40,2%</td><td class="n">+7,7%</td></tr>
+        <tr><td>LinkedIn</td><td class="n">18,0 M</td><td class="n">33,6%</td><td class="n">+20,0%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Fuente: DataReportal, Kepios, GWI y Similarweb, Digital 2026. El buscador sigue siendo el canal número uno para investigar una compra (45,8%), por encima de las herramientas de IA (22,1%).</p>
+</section>
+
+<section class="section" id="objetivo-cpa">
+  <div class="section-head">
+    <p class="eyebrow">Objetivo principal</p>
+    <h2>Bajar el CPA 74% entre abril y diciembre</h2>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><b>USD 47</b><span>CPA de partida, abril de 2026</span></div>
+    <div class="kpi"><b>USD 12</b><span>CPA meta para diciembre de 2026</span></div>
+    <div class="kpi"><b>194</b><span>Conversiones meta en diciembre · 34 en abril</span></div>
+    <div class="kpi"><b>+5%</b><span>Crecimiento mensual del presupuesto en el plan</span></div>
+  </div>
+  <div class="panel">
+    <h3>CPA proyectado por mes (USD)</h3>
+    <div class="proy" role="img" aria-label="CPA meta en USD: abril 47, mayo 40, junio 33, julio 28, agosto 24, septiembre 20, octubre 17, noviembre 14, diciembre 12">
+      <div style="height:100%"><span>$47</span></div>
+      <div style="height:85%"><span>$40</span></div>
+      <div style="height:70%"><span>$33</span></div>
+      <div style="height:60%"><span>$28</span></div>
+      <div style="height:51%"><span>$24</span></div>
+      <div style="height:43%"><span>$20</span></div>
+      <div style="height:36%"><span>$17</span></div>
+      <div style="height:30%"><span>$14</span></div>
+      <div style="height:26%"><span>$12</span></div>
+    </div>
+    <div class="xl"><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dic</span></div>
+    <p>Al presentar la propuesta (corte al 7 de julio) el CPA real estaba por debajo de la meta los cuatro meses: USD 43,78 en abril, 31,94 en mayo, 20,10 en junio y 19,44 en julio (TRM $3.900). Para ver cómo siguió el costo, con desembolsos reales de RIS, está el <a href="caso-exito-costo-desembolso-2026.html">caso de éxito 2026</a>: en septiembre cada desembolso costó $31.561.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Presupuesto</p>
+    <h2>Inversión incremental, sin tocar Meta</h2>
+  </div>
+  <ol class="pasos">
+    <li><b>Presupuesto actual</b>Meta se mantiene al 100%, para proteger los resultados y el aprendizaje del algoritmo.</li>
+    <li><b>+ Presupuesto incremental</b>Inversión nueva, adicional al presupuesto vigente. No es una reasignación.</li>
+    <li><b>Prueba de un mes</b>Search y TikTok arrancan con un monto acotado para validar costo y calidad.</li>
+    <li><b>Escalar por resultados</b>El incremental se mueve entre canales según costo y volumen, siempre protegiendo el piso de Meta.</li>
+  </ol>
+</section>
+
+<section class="section" id="flow">
+  <div class="section-head">
+    <p class="eyebrow">Flow de medios</p>
+    <h2>Flight de prueba: $3,45 M en un mes</h2>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><b>$3,45 M</b><span>Presupuesto total, incluida la optimización</span></div>
+    <div class="kpi"><b>$3,0 M</b><span>Inversión en campañas, Google + TikTok</span></div>
+    <div class="kpi"><b>$450.000</b><span>Optimización (15%): gestión y ajuste continuo</span></div>
+    <div class="kpi"><b>1 mes</b><span>Duración del flight de prueba</span></div>
+  </div>
+
+  <div class="panel">
+    <h3>Inversión por línea</h3>
+    <div class="split" role="img" aria-label="Google Search 33%, TikTok Infeed 47%, TikTok Search 20%">
+      <span style="width:33.3%;background:var(--ink);color:#fff">Google Search 33%</span>
+      <span style="width:46.7%;background:var(--accent);color:var(--ink)">TikTok Infeed 47%</span>
+      <span style="width:20%;background:#B9B9B3;color:var(--ink)">TikTok Search 20%</span>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Medio</th><th>Campaña</th><th>Objetivo</th><th>KPI principal</th><th class="n">Presupuesto</th><th class="n">Share</th></tr></thead>
+      <tbody>
+        <tr><td>Google</td><td>Search</td><td>Conversión</td><td>CPA</td><td class="n">$1.000.000</td><td class="n">33,3%</td></tr>
+        <tr><td>TikTok</td><td>Infeed</td><td>Tráfico</td><td>CPC</td><td class="n">$1.400.000</td><td class="n">46,7%</td></tr>
+        <tr><td>TikTok</td><td>Search</td><td>Impresiones</td><td>CPM</td><td class="n">$600.000</td><td class="n">20,0%</td></tr>
+        <tr class="tot"><td colspan="4">Total campañas</td><td class="n">$3.000.000</td><td class="n">100%</td></tr>
+        <tr><td colspan="4">Optimización (15%)</td><td class="n">$450.000</td><td class="n"></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Costos y resultados esperados por línea</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Medio</th><th>Campaña</th><th class="n">CPA</th><th class="n">CPM</th><th class="n">CPC</th><th class="n">Conversiones</th><th class="n">Impresiones</th><th class="n">Visitas</th></tr></thead>
+      <tbody>
+        <tr><td>Google</td><td>Search</td><td class="n kpi-p">$100.000</td><td class="n">—</td><td class="n">$100</td><td class="n">10</td><td class="n">—</td><td class="n">5.000</td></tr>
+        <tr><td>TikTok</td><td>Infeed</td><td class="n">$100.000</td><td class="n">$2.500</td><td class="n kpi-p">$50</td><td class="n">14</td><td class="n">560.000</td><td class="n">14.000</td></tr>
+        <tr><td>TikTok</td><td>Search</td><td class="n">$150.000</td><td class="n kpi-p">$1.000</td><td class="n">$250</td><td class="n">4</td><td class="n">600.000</td><td class="n">2.400</td></tr>
+        <tr class="tot"><td colspan="5">Total</td><td class="n">28</td><td class="n">1,16 M</td><td class="n">21.400</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">En amarillo, el KPI principal de cada línea. Cada línea reporta los tres costos para comparar eficiencia entre ellas, no solo contra su propia meta.</p>
+
+  <h3>Brief por línea</h3>
+  <div class="medios">
+    <div class="medio">
+      <h3>Google · Search</h3>
+      <ul>
+        <li><b>Objetivo:</b> conversión.</li>
+        <li><b>Audiencia:</b> 22+ años, intereses in-market.</li>
+        <li><b>Mensaje:</b> construir credibilidad y reducir la desconfianza propia del sector.</li>
+        <li><b>Compra:</b> CPA $100.000, meta 10 conversiones.</li>
+      </ul>
+    </div>
+    <div class="medio">
+      <h3>TikTok · Infeed</h3>
+      <ul>
+        <li><b>Objetivo:</b> tráfico.</li>
+        <li><b>Audiencia:</b> geolocalizada.</li>
+        <li><b>Mensaje:</b> impulsar la acción inmediata y reducir la fricción de la solicitud.</li>
+        <li><b>Compra:</b> CPC $50, meta 28.000 clics.</li>
+      </ul>
+    </div>
+    <div class="medio">
+      <h3>TikTok · Search</h3>
+      <ul>
+        <li><b>Objetivo:</b> conversión.</li>
+        <li><b>Audiencia:</b> 22+ años, intereses in-market.</li>
+        <li><b>Mensaje:</b> credibilidad, el mismo de Google Search.</li>
+        <li><b>Compra:</b> CPA $150.000, meta 4 conversiones.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <p class="eyebrow">Lo que cambió desde la propuesta</p>
+    <h2>Cómo se está ejecutando</h2>
+  </div>
+  <div class="panel">
+    <p><b>Google Search entró con más presupuesto que el de la prueba:</b> $3 M en noviembre frente a $1 M en el flight propuesto, dentro de un flow total de $21 M (Meta $18 M). Se mide por costo por desembolso con la base de RIS, igual que Meta.</p>
+    <p><b>Audiencia:</b> la campaña quedó para mayores de 25 años, como pide RIS (la propuesta decía 22+).</p>
+    <p><b>Lo que falta definir con RIS:</b> la aprobación del presupuesto de prueba para TikTok (Infeed y Search) y la fecha de arranque.</p>
+  </div>
+  <p class="note">Fuente: propuesta de medios ADCOM para RIS, julio de 2026 (<a href="propuesta-medios-presentacion.html">presentación original</a>). El estado y las cifras de noviembre vienen de la implementación de Google Search y del flow de noviembre.</p>
+</section>
+
+</div>
+</body>
+</html>
