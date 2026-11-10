@@ -12,7 +12,7 @@
   .ok { color: #1E7B34; } .ko { color: #B3261E; }
   .kpi .st { font-size: 12px; font-weight: 600; justify-self: start; border-radius: 99px; padding: 2px 10px; }
   .kpi .st.ok { background: #E3F2E6; } .kpi .st.ko { background: #FBE4E2; }
-  .scen { display: grid; gap: 12px; }
+  .scen { display: grid; gap: 12px; margin: 4px 0 14px; }
   .scen .row { display: grid; grid-template-columns: 230px 1fr 60px; gap: 12px; align-items: center; font-size: 14px; }
   .scen .track { position: relative; height: 24px; background: var(--panel); border-radius: 4px; }
   .scen .bar { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 0 4px 4px 0; background: #B9B9B3; }
@@ -37,6 +37,23 @@
   .timeline .d.req { color: #8A6A00; }
   .eq { font-size: clamp(17px, 2.4vw, 20px); font-weight: 600; text-align: center; padding: 6px 0; }
   .eq b { background: var(--accent-soft); border-radius: 8px; padding: 2px 8px; }
+  .lead { font-size: 16px; }
+  .ph { font-size: 16px; }
+  .steps { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 10px; align-items: stretch; }
+  .step { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; gap: 2px; align-content: start; font-size: 13px; color: var(--muted); }
+  .step .k { font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+  .step b { font-size: 22px; color: var(--ink); line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .step.ko { background: #FBE4E2; border-color: #F2C9C5; } .step.ko b { color: #B3261E; }
+  .step.ok { background: #E3F2E6; border-color: #CDE6D2; } .step.ok b { color: #1E7B34; }
+  .arrow { align-self: center; font-size: 20px; color: var(--muted); }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px; }
+  details.calc { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 20px; }
+  details.calc summary { cursor: pointer; font-weight: 600; font-size: 14px; }
+  details.calc[open] summary { margin-bottom: 12px; }
+  @media (max-width: 560px) {
+    .steps { grid-template-columns: 1fr; }
+    .arrow { transform: rotate(90deg); justify-self: center; line-height: 1; }
+  }
   @media (max-width: 560px) {
     .scen .row { grid-template-columns: 1fr; gap: 4px; }
     .scen .num { text-align: left; }
@@ -60,14 +77,14 @@
     <h2>Cumplimos 2 de los 3 KPI del flow</h2>
   </div>
   <div class="kpis">
-    <div class="kpi"><b>20.149</b><span>Visitas a la página · meta 18.328</span><span class="st ok">110% · cumplida</span></div>
+    <div class="kpi"><b>24.436</b><span>Visitas a la página · meta 18.328</span><span class="st ok">133% · cumplida</span></div>
     <div class="kpi"><b>8.564</b><span>Solicitudes (registros) · meta 7.164</span><span class="st ok">120% · cumplida</span></div>
-    <div class="kpi"><b>≈ 277</b><span>Desembolsos proyectados · meta 500</span><span class="st ko">55% · no cumplida</span></div>
+    <div class="kpi"><b>285</b><span>Desembolsos · meta 500 · $44.931 por desembolso</span><span class="st ko">57% · no cumplida</span></div>
   </div>
   <div class="panel">
-    <p><b>Octubre fue el único mes en que no se llegó a la meta de desembolsos, y fue por el ritmo de desembolso, no por falta de solicitudes.</b> Los medios entregaron más visitas y más solicitudes de las planeadas. Al 19 de octubre la base de RIS registraba <b>170 desembolsos</b>, un ritmo de 8,9 por día que proyecta unos 277 en el mes.</p>
+    <p><b>Octubre fue el único mes en que no se llegó a la meta de desembolsos, y fue por el ritmo de desembolso, no por falta de solicitudes.</b> Los medios entregaron más visitas y más solicitudes de las planeadas. El mes cerró con <b>285 desembolsos</b> (272 en septiembre) y $12,8 M invertidos en Meta, es decir <b>$44.931 por desembolso</b>, frente a $31.561 en septiembre.</p>
     <p><b>Si en noviembre el proceso se mantiene como en octubre, con el presupuesto de noviembre llegaríamos a unos 370 desembolsos</b>, lejos de los 750 de la meta. Por eso la meta depende tanto del volumen que traen los medios como de la conversión del proceso.</p>
-    <p class="note">Visitas y solicitudes: Meta Ads, octubre completo, $12,8 M invertidos. Desembolsos: base de clientes de RIS con corte al 19 de octubre, proyectada a 31 días; la cifra final la confirma RIS.</p>
+    <p class="note">Fuente: cierre de octubre del reporte de Meta (Looker): visitas, solicitudes (simulaciones), créditos exitosos y costo por desembolso, con $12.805.436 invertidos.</p>
   </div>
 </section>
 
@@ -90,36 +107,60 @@
 <section class="section">
   <div class="section-head">
     <p class="eyebrow">La meta es de parte y parte</p>
-    <h2>Con más presupuesto no alcanza: también hay que convertir mejor</h2>
+    <h2>Más presupuesto solo no alcanza: también hay que convertir mejor</h2>
   </div>
   <div class="panel">
-    <p class="eq">Desembolsos = <b>solicitudes</b> (medios) × <b>conversión del proceso</b> (RIS)</p>
-    <p>Con los $21 M del flow de noviembre estimamos unas <b>14.200 solicitudes con identificación</b>, un 39% más que en octubre. No crecen al mismo ritmo que la inversión porque Meta ya muestra rendimientos decrecientes. Para que esas solicitudes se conviertan en 750 créditos, la conversión de solicitud a desembolso tiene que pasar de <b>2,6% a 5,3%</b>.</p>
-    <div class="legend"><span><i style="background:#B9B9B3"></i>No llega a la meta</span><span><i style="background:#141414"></i>Llega a la meta</span><span><i style="background:var(--accent)"></i>Meta: 750</span></div>
-    <div class="scen" role="img" aria-label="Desembolsos estimados en noviembre según la tasa de aprobación de identidad">
-      <div class="row" title="Conversión 2,60%"><span>Proceso como en octubre · identidad 34%</span><div class="track"><div class="bar" style="width:41.1%"></div><div class="goal" style="left:83.3%"></div></div><span class="num">370</span></div>
-      <div class="row" title="Conversión 3,61%"><span>Proceso como en septiembre · identidad 43,5%</span><div class="track"><div class="bar" style="width:57%"></div><div class="goal" style="left:83.3%"></div></div><span class="num">513</span></div>
-      <div class="row" title="Conversión 4,47%"><span>Identidad 55%</span><div class="track"><div class="bar" style="width:70.7%"></div><div class="goal" style="left:83.3%"></div></div><span class="num">636</span></div>
-      <div class="row hi" title="Conversión 5,29%"><span><b>Identidad 65%</b></span><div class="track"><div class="bar reach" style="width:83.6%"></div><div class="goal" style="left:83.3%"></div></div><span class="num"><b>752</b></span></div>
-      <div class="row" title="Conversión 5,94%"><span>Identidad 70% y OTP 94%</span><div class="track"><div class="bar reach" style="width:93.8%"></div><div class="goal" style="left:83.3%"></div></div><span class="num">844</span></div>
+    <p class="lead">Los medios traen personas que piden el crédito; el proceso de RIS decide cuántas terminan con el crédito en la mano. <b>Para llegar a 750 necesitamos las dos cosas.</b></p>
+    <div class="steps">
+      <div class="step"><span class="k">Lo que traen los medios</span><b>14.200</b><span>solicitudes en noviembre con los $21 M del flow</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><span class="k">Hoy terminan en crédito</span><b>2,6 de cada 100</b><span>como en octubre</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step ko"><span class="k">Resultado</span><b>370</b><span>desembolsos: la mitad de la meta</span></div>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="k">Las mismas solicitudes</span><b>14.200</b><span>sin invertir un peso más</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step"><span class="k">Si terminan en crédito</span><b>5,3 de cada 100</b><span>el doble que hoy</span></div>
+      <div class="arrow" aria-hidden="true">→</div>
+      <div class="step ok"><span class="k">Resultado</span><b>752</b><span>desembolsos: se cumple la meta</span></div>
     </div>
   </div>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Escenario de proceso</th><th>Conversión</th><th>Desembolsos con el flow</th><th>Solicitudes necesarias para 750</th></tr></thead>
-      <tbody>
-        <tr><td>Como en octubre (identidad 34%)</td><td>2,60%</td><td>370</td><td>28.800</td></tr>
-        <tr><td>Como en septiembre (identidad 43,5%)</td><td>3,61%</td><td>513</td><td>20.800</td></tr>
-        <tr><td>Identidad 55%</td><td>4,47%</td><td>636</td><td>16.800</td></tr>
-        <tr class="hi"><td>Identidad 65%</td><td>5,29%</td><td>752</td><td>14.200</td></tr>
-        <tr><td>Identidad 70% y OTP 94%</td><td>5,94%</td><td>844</td><td>12.600</td></tr>
-      </tbody>
-    </table>
+  <div class="two">
+    <div class="panel">
+      <p><b>¿Dónde se pierden?</b> En la validación de identidad (la foto del documento y del rostro). De cada 100 personas que Experian ya aprobó, en octubre solo <b>34 terminaron</b> esa validación; en septiembre eran 43. La mayoría no fue rechazada: el proceso se les venció o lo cancelaron.</p>
+    </div>
+    <div class="panel">
+      <p><b>¿Y si solo ponemos más plata?</b> Con el proceso como está harían falta <b>28.800 solicitudes</b>, casi el triple de octubre. Eso no se compra con el presupuesto de noviembre: en Meta cada peso adicional ya rinde menos.</p>
+    </div>
   </div>
   <div class="panel">
-    <p><b>Solo con medios, la meta exigiría casi triplicar las solicitudes</b> (28.800 frente a unas 10.200 en octubre), algo que el presupuesto de noviembre no compra. Con la aprobación de identidad en 65%, el volumen que ya está planeado alcanza para 750. Por eso el plan tiene dos lados: ADCOM trae más y mejores solicitudes, y RIS recupera a los viables que hoy se pierden en identidad.</p>
-    <p class="note">Estimación: solicitudes con ID de octubre proyectadas desde los días 1 al 13 (4.278). El crecimiento por inversión usa la elasticidad 0,67 del simulador de RIS, calibrada con septiembre y octubre. Las demás tasas son las de octubre: OTP 90,1%, viabilidad 9,3% y desembolso final 97,1% (el de septiembre) en los escenarios de mejora.</p>
+    <h3 class="ph">Desembolsos en noviembre según cuántos viables terminan la validación de identidad</h3>
+    <div class="legend"><span><i style="background:#B9B9B3"></i>No llega a la meta</span><span><i style="background:#141414"></i>Llega a la meta</span><span><i style="background:var(--accent)"></i>Meta: 750</span></div>
+    <div class="scen" role="img" aria-label="Desembolsos estimados en noviembre con 14.200 solicitudes: 34 de cada 100 validan identidad, 370; 43 de cada 100, 513; 55 de cada 100, 636; 65 de cada 100, 752.">
+      <div class="row"><span>Como en octubre · <b>34 de cada 100</b></span><div class="track"><div class="bar" style="width:41.1%"></div><div class="goal" style="left:83.3%"></div></div><span class="num">370</span></div>
+      <div class="row"><span>Como en septiembre · <b>43 de cada 100</b></span><div class="track"><div class="bar" style="width:57%"></div><div class="goal" style="left:83.3%"></div></div><span class="num">513</span></div>
+      <div class="row"><span><b>55 de cada 100</b></span><div class="track"><div class="bar" style="width:70.7%"></div><div class="goal" style="left:83.3%"></div></div><span class="num">636</span></div>
+      <div class="row hi"><span><b>65 de cada 100</b></span><div class="track"><div class="bar reach" style="width:83.6%"></div><div class="goal" style="left:83.3%"></div></div><span class="num"><b>752</b></span></div>
+    </div>
+    <p><b>Por eso el plan tiene dos lados:</b> ADCOM trae más y mejores solicitudes, y RIS ayuda a que los que ya pasaron Experian terminen la validación (recordatorios, reingreso, revisar por qué se vence).</p>
   </div>
+  <details class="calc">
+    <summary>Ver el cálculo</summary>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Escenario</th><th>De cada 100 solicitudes terminan en crédito</th><th>Desembolsos con 14.200 solicitudes</th><th>Solicitudes necesarias para 750</th></tr></thead>
+        <tbody>
+          <tr><td>Como en octubre (identidad 34%)</td><td>2,6</td><td>370</td><td>28.800</td></tr>
+          <tr><td>Como en septiembre (identidad 43,5%)</td><td>3,6</td><td>513</td><td>20.800</td></tr>
+          <tr><td>Identidad 55%</td><td>4,5</td><td>636</td><td>16.800</td></tr>
+          <tr class="hi"><td>Identidad 65%</td><td>5,3</td><td>752</td><td>14.200</td></tr>
+          <tr><td>Identidad 70% y OTP 94%</td><td>5,9</td><td>844</td><td>12.600</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">14.200 solicitudes con identificación = 39% más que en octubre (proyectado desde los días 1 al 13: 4.278); crecen menos que la inversión por la elasticidad 0,67 del simulador de RIS, calibrada con septiembre y octubre. Las demás tasas son las de octubre: OTP 90,1%, viabilidad 9,3% y desembolso final 97,1% (el de septiembre) en los escenarios de mejora.</p>
+  </details>
 </section>
 
 <section class="section">
@@ -134,8 +175,8 @@
       <p>Meta ya muestra rendimientos decrecientes: en octubre la inversión subió 49% y las solicitudes 27%. Google trae demanda nueva: personas que ya están buscando un crédito. Solo "préstamo en línea" suma unas 74.000 búsquedas al mes en Colombia, y "créditos en línea" otras 33.000.</p>
       <ul>
         <li>Campaña creada con 5 grupos de anuncios: marca, crédito en línea, rápido y fácil, cuotas y libre inversión, e independientes.</li>
-        <li>Presupuesto de noviembre: <b>$3 M</b> (143.000 por día), con maximización de clics y CPC máximo de 3.000.</li>
-        <li><b>Está en pausa</b> hasta que la página publique las condiciones del crédito (plazo, costo anual máximo y ejemplo), como exige la política de Google para préstamos personales.</li>
+        <li>Presupuesto de noviembre: <b>$3 M</b> (136.000 por día desde el 9 de noviembre), con maximización de clics y CPC máximo de 3.000.</li>
+        <li><b>Activa desde el 9 de noviembre</b>, en la cuenta nueva con facturación aprobada. La página ya publica las condiciones del crédito (plazo de 90 a 180 días, costo anual máximo y ejemplo) que exige la política de Google para préstamos personales.</li>
       </ul>
     </div>
     <div class="front">
@@ -190,7 +231,7 @@
       <span class="who">ADCOM</span>
       <h3>Traer más y mejores solicitudes</h3>
       <ul>
-        <li>Activar Google Search apenas la página tenga las condiciones del crédito.</li>
+        <li>Optimizar Google Search, activo desde el 9 de noviembre, y medir su costo por solicitud y por desembolso.</li>
         <li>Actualizar las audiencias cada vez que llegue una base, y lanzar la audiencia de verificación incompleta.</li>
         <li>Mantener el ritmo del flow de $21 M y revisar el costo por solicitud cada semana.</li>
         <li>Medir el funnel por cohorte junto con RIS: costo por solicitud, por viable y por desembolso.</li>
@@ -201,7 +242,7 @@
       <h3>Que más viables terminen en crédito</h3>
       <ul>
         <li><b>Validación de identidad:</b> revisar por qué expira o se cancela, y habilitar reingreso y recordatorios para los viables que no terminaron.</li>
-        <li><b>Página:</b> publicar el bloque de condiciones del crédito para liberar Google.</li>
+        <li><b>Origen de la solicitud:</b> registrar en la base el UTM de Google para medir cuántos desembolsos trae (las condiciones del crédito ya están publicadas en la página).</li>
         <li><b>Bases:</b> enviar las actualizaciones y la base nueva en las frecuencias acordadas, y responder si quien no pasó identidad puede reintentarlo.</li>
         <li><b>OTP y desembolso:</b> auditar el envío de códigos y dar seguimiento a los aprobados que aún no se desembolsan.</li>
       </ul>
@@ -223,15 +264,15 @@
         <tr><td>Remarketing · Cuenta pendiente</td><td>Meta</td><td>$360.000</td><td>1,7%</td><td>12.100</td><td>1 nov</td></tr>
         <tr><td>Remarketing · Cuenta creada</td><td>Meta</td><td>$360.000</td><td>1,7%</td><td>12.200</td><td>1 nov</td></tr>
         <tr><td>Remarketing · Verificación incompleta</td><td>Meta</td><td>$360.000</td><td>1,7%</td><td>21.200</td><td>≈ 14 nov</td></tr>
-        <tr class="hi"><td>Search · Solicitud de crédito</td><td>Google</td><td>$3.000.000</td><td>14,3%</td><td>143.000</td><td>≈ 10 nov</td></tr>
+        <tr class="hi"><td>Search · Solicitud de crédito</td><td>Google</td><td>$3.000.000</td><td>14,3%</td><td>136.000</td><td>9 nov</td></tr>
       </tbody>
       <tfoot><tr><td>Total</td><td></td><td>$21.000.000</td><td>100%</td><td></td><td></td></tr></tfoot>
     </table>
   </div>
-  <p class="note">El flow toma la meta de 750 desembolsos × $28.000 por desembolso. Del 1 al 4 de noviembre se invirtieron $1,43 M en Meta; el diario reparte lo pendiente hasta el 30. Si Google o la audiencia nueva arrancan tarde, su presupuesto se reasigna.</p>
+  <p class="note">El flow toma la meta de 750 desembolsos × $28.000 por desembolso. Del 1 al 4 de noviembre se invirtieron $1,43 M en Meta; el diario reparte lo pendiente hasta el 30. Google arrancó el 9 de noviembre; si la audiencia de verificación incompleta arranca tarde, su presupuesto se reasigna. <b>Avance al 10 de noviembre:</b> $5,48 M invertidos (Meta $5,26 M y Google $0,22 M), 26% del flow con 33% del mes corrido.</p>
 </section>
 
-<footer>ADCOM · RIS · Ruta a 750 desembolsos · Actualizado el 4 de noviembre de 2026</footer>
+<footer>ADCOM · RIS · Ruta a 750 desembolsos · Actualizado el 10 de noviembre de 2026</footer>
 </div>
 </body>
 </html>

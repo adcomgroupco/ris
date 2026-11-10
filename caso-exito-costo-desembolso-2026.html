@@ -41,7 +41,8 @@
   .col.rj .stk .b { width: 100%; border-radius: 0; min-height: 0; }
   .col.rj:hover .stk, .col.rj:focus .stk { filter: brightness(.9); }
   .col .v.nd { color: var(--muted); font-weight: 400; font-style: italic; }
-  .xl.ratio .rt b { display: inline-block; min-width: 34px; padding: 3px 6px; border-radius: 99px; background: #FBE4DE; color: var(--rech2); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .rnote { margin-top: 0; }
+  .xl.ratio .rt b { display: inline-block; min-width: 34px; padding: 3px 6px; border-radius: 99px; background: var(--accent-soft); color: var(--ink); font-size: 13px; font-variant-numeric: tabular-nums; }
   .xl { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
   .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
   .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
@@ -117,7 +118,7 @@
     <p class="eyebrow">Volumen</p>
     <h2>Los desembolsos crecieron mes a mes</h2>
   </div>
-  <div class="chart" role="img" aria-label="Dos paneles por mes, 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre 285, meta de noviembre 750. Rechazados: enero 734, febrero 791, marzo 831, abril 819, mayo 627, junio 725, julio 2.069, agosto 5.203, septiembre 5.572. Rechazados por cada desembolso: enero 61, febrero 38, marzo 15, abril 13, mayo 19, junio 10, julio 19, agosto 23, septiembre 20.">
+  <div class="chart" role="img" aria-label="Dos paneles por mes, 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre 285, meta de noviembre 750. Rechazados: enero 734, febrero 791, marzo 831, abril 819, mayo 627, junio 725, julio 2.069, agosto 5.203, septiembre 5.572. De cada 100 solicitudes con respuesta terminaron en crédito: enero 1,6, febrero 2,6, marzo 6,1, abril 7,0, mayo 5,0, junio 8,9, julio 5,1, agosto 4,1, septiembre 4,7.">
     <h3>Créditos desembolsados y rechazados por mes, 2026</h3>
     <p class="sub">Por mes de la solicitud. Cada panel tiene su propia escala: los rechazados son unas 20 veces más que los desembolsos. Octubre: cierre del mes. Noviembre: meta.</p>
     <p class="plabel">Desembolsos</p>
@@ -150,8 +151,9 @@
       <div class="col rj"><span class="v nd" style="bottom:4px"></span></div>
     </div>
     <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov · meta</span></div>
-    <p class="plabel">Rechazados por cada desembolso <span>menos es mejor</span></p>
-    <div class="xl ratio"><span class="rt"><b>61</b></span><span class="rt"><b>38</b></span><span class="rt"><b>15</b></span><span class="rt"><b>13</b></span><span class="rt"><b>19</b></span><span class="rt"><b>10</b></span><span class="rt"><b>19</b></span><span class="rt"><b>23</b></span><span class="rt"><b>20</b></span><span class="rt"><b>—</b></span><span class="rt"><b>—</b></span></div>
+    <p class="plabel">De cada 100 solicitudes con respuesta, cuántas terminaron en crédito</p>
+    <div class="xl ratio"><span class="rt"><b>1,6</b></span><span class="rt"><b>2,6</b></span><span class="rt"><b>6,1</b></span><span class="rt"><b>7,0</b></span><span class="rt"><b>5,0</b></span><span class="rt"><b>8,9</b></span><span class="rt"><b>5,1</b></span><span class="rt"><b>4,1</b></span><span class="rt"><b>4,7</b></span><span class="rt"></span><span class="rt"></span></div>
+    <p class="sub rnote">Respuesta = desembolsada o rechazada. En enero solo 1,6 de cada 100 terminaban en crédito; desde marzo, entre 4 y 9.</p>
     <div class="legend"><span><i style="background:#B9B9B3"></i>Desembolsos del mes</span><span><i style="background:var(--ink)"></i>Costo estabilizado</span><span><i style="background:var(--accent-soft);outline:1.5px dashed var(--accent)"></i>Meta de noviembre</span><span><i style="background:var(--rech)"></i>Rechazados por Experian</span><span><i style="background:var(--rech2)"></i>Rechazados en identidad o desembolso</span></div>
   </div>
   <div class="panel">
