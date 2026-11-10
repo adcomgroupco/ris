@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/ris-reportes.css">
 <style>
-  :root { --rech: #C8553D; }
+  :root { --rech: #E39A88; --rech2: #A8321D; }
   .kpi .st { font-size: 12px; font-weight: 600; justify-self: start; border-radius: 99px; padding: 2px 10px; background: #E3F2E6; color: #1E7B34; }
   .kpi .st.warn { background: var(--accent-soft); color: #8A6A00; }
   .chart { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px 14px; display: grid; gap: 10px; }
@@ -29,8 +29,10 @@
   .col.pair { gap: 3px; }
   .col.pair .bw { position: relative; height: 100%; flex: 1; max-width: 22px; display: flex; align-items: flex-end; }
   .col.pair .b { width: 100%; }
-  .col .b.r, .col.hi .b.r { background: var(--rech); }
-  .col .v.r { color: var(--rech); }
+  .col .b.r, .col.hi .b.r { background: var(--rech); border-radius: 4px 4px 0 0; }
+  .col .b.r2, .col.hi .b.r2 { background: var(--rech2); border-radius: 0; min-height: 0; }
+  .col.pair .bw.stack { flex-direction: column-reverse; justify-content: flex-start; }
+  .col .v.r { color: var(--rech2); }
   .xl { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
   .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
   .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
@@ -89,29 +91,29 @@
     <p class="eyebrow">Volumen</p>
     <h2>Los desembolsos crecieron mes a mes</h2>
   </div>
-  <div class="chart" role="img" aria-label="Desembolsos y rechazados por mes en 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre unos 277 proyectados. Rechazados: enero 5, febrero 12, marzo 32, abril 16, mayo 9, junio 16, julio 8, agosto 213, septiembre 300.">
+  <div class="chart" role="img" aria-label="Desembolsos y rechazados por mes en 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre unos 277 proyectados. Rechazados (Experian más identidad o desembolso): enero 734, febrero 791, marzo 831, abril 819, mayo 627, junio 725, julio 2.069, agosto 5.203, septiembre 5.572.">
     <h3>Créditos desembolsados y rechazados por mes, 2026</h3>
-    <p class="sub">Por mes de la solicitud. Rechazados: solicitudes que RIS rechazó en la validación de identidad o en el desembolso. Octubre es una proyección.</p>
+    <p class="sub">Por mes de la solicitud. Rechazados: todas las solicitudes negadas por Experian o rechazadas por RIS en la validación de identidad o en el desembolso. Octubre es una proyección.</p>
     <div class="cols">
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:4.0%"></div><span class="v" style="bottom:calc(4.0% + 4px)">12</span></div><div class="bw"><div class="b r" style="height:1.7%"></div></div><span class="tip">Enero: 12 desembolsos · $10,8 M<br>5 rechazados (29% de los que llegaron al final)</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:7.0%"></div></div><div class="bw"><div class="b r" style="height:4.0%"></div></div><span class="tip">Febrero: 21 desembolsos · $17,0 M<br>12 rechazados (36% de los que llegaron al final)</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:18.0%"></div></div><div class="bw"><div class="b r" style="height:10.7%"></div></div><span class="tip">Marzo: 54 desembolsos · $44,3 M<br>32 rechazados (37% de los que llegaron al final)</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:20.7%"></div></div><div class="bw"><div class="b r" style="height:5.3%"></div></div><span class="tip">Abril: 62 desembolsos · $50,2 M<br>16 rechazados (21% de los que llegaron al final)</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:11.0%"></div></div><div class="bw"><div class="b r" style="height:3.0%"></div></div><span class="tip">Mayo: 33 desembolsos · $27,9 M<br>9 rechazados (21% de los que llegaron al final)</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:23.7%"></div></div><div class="bw"><div class="b r" style="height:5.3%"></div></div><span class="tip">Junio: 71 desembolsos · $61,6 M<br>16 rechazados (18% de los que llegaron al final)</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:37.0%"></div><span class="v" style="bottom:calc(37.0% + 4px)">111</span></div><div class="bw"><div class="b r" style="height:2.7%"></div></div><span class="tip">Julio: 111 desembolsos · $86,2 M<br>8 rechazados (7% de los que llegaron al final)</span></div>
-      <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:74.7%"></div><span class="v" style="bottom:calc(74.7% + 4px)">224</span></div><div class="bw"><div class="b r" style="height:71.0%"></div><span class="v r" style="bottom:calc(71.0% + 4px)">213</span></div><span class="tip">Agosto: 224 desembolsos · $150,2 M<br>213 rechazados (49% de los que llegaron al final)</span></div>
-      <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:90.7%"></div><span class="v" style="bottom:calc(90.7% + 4px)">272</span></div><div class="bw"><div class="b r" style="height:100.0%"></div><span class="v r" style="bottom:calc(100.0% + 4px)">300</span></div><span class="tip">Septiembre: 272 desembolsos · $180,8 M<br>300 rechazados (52% de los que llegaron al final)</span></div>
-      <div class="col pair proj" tabindex="0"><div class="bw"><div class="b" style="height:92.3%"></div><span class="v" style="bottom:calc(92.3% + 4px)">≈277</span></div><div class="bw"></div><span class="tip">Octubre: ≈277 desembolsos proyectados (170 al 19 de oct) · rechazados sin base aún</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.2%"></div><span class="v" style="bottom:calc(0.2% + 4px)">12</span></div><div class="bw stack"><div class="b r2" style="height:0.1%"></div><div class="b r" style="height:12.6%"></div><span class="v r" style="bottom:calc(12.7% + 4px)">734</span></div><span class="tip">Enero: 12 desembolsos · $10,8 M<br>734 rechazados: 729 por Experian · 5 en identidad o desembolso</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.4%"></div></div><div class="bw stack"><div class="b r2" style="height:0.2%"></div><div class="b r" style="height:13.4%"></div></div><span class="tip">Febrero: 21 desembolsos · $17,0 M<br>791 rechazados: 779 por Experian · 12 en identidad o desembolso</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.9%"></div></div><div class="bw stack"><div class="b r2" style="height:0.6%"></div><div class="b r" style="height:13.8%"></div></div><span class="tip">Marzo: 54 desembolsos · $44,3 M<br>831 rechazados: 799 por Experian · 32 en identidad o desembolso</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:1.1%"></div></div><div class="bw stack"><div class="b r2" style="height:0.3%"></div><div class="b r" style="height:13.8%"></div></div><span class="tip">Abril: 62 desembolsos · $50,2 M<br>819 rechazados: 803 por Experian · 16 en identidad o desembolso</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.6%"></div></div><div class="bw stack"><div class="b r2" style="height:0.2%"></div><div class="b r" style="height:10.7%"></div></div><span class="tip">Mayo: 33 desembolsos · $27,9 M<br>627 rechazados: 618 por Experian · 9 en identidad o desembolso</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:1.2%"></div></div><div class="bw stack"><div class="b r2" style="height:0.3%"></div><div class="b r" style="height:12.2%"></div></div><span class="tip">Junio: 71 desembolsos · $61,6 M<br>725 rechazados: 709 por Experian · 16 en identidad o desembolso</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:1.9%"></div><span class="v" style="bottom:calc(1.9% + 4px)">111</span></div><div class="bw stack"><div class="b r2" style="height:0.1%"></div><div class="b r" style="height:35.5%"></div><span class="v r" style="bottom:calc(35.6% + 4px)">2.069</span></div><span class="tip">Julio: 111 desembolsos · $86,2 M<br>2.069 rechazados: 2.061 por Experian · 8 en identidad o desembolso</span></div>
+      <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:3.9%"></div><span class="v" style="bottom:calc(3.9% + 4px)">224</span></div><div class="bw stack"><div class="b r2" style="height:3.7%"></div><div class="b r" style="height:86.0%"></div><span class="v r" style="bottom:calc(89.7% + 4px)">5.203</span></div><span class="tip">Agosto: 224 desembolsos · $150,2 M<br>5.203 rechazados: 4.990 por Experian · 213 en identidad o desembolso</span></div>
+      <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:4.7%"></div><span class="v" style="bottom:calc(4.7% + 4px)">272</span></div><div class="bw stack"><div class="b r2" style="height:5.2%"></div><div class="b r" style="height:90.9%"></div><span class="v r" style="bottom:calc(96.1% + 4px)">5.572</span></div><span class="tip">Septiembre: 272 desembolsos · $180,8 M<br>5.572 rechazados: 5.272 por Experian · 300 en identidad o desembolso</span></div>
+      <div class="col pair proj" tabindex="0"><div class="bw"><div class="b" style="height:4.8%"></div><span class="v" style="bottom:calc(4.8% + 4px)">≈277</span></div><div class="bw"></div><span class="tip">Octubre: ≈277 desembolsos proyectados (170 al 19 de oct) · rechazados sin base aún</span></div>
     </div>
     <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span></div>
-    <div class="legend"><span><i style="background:#B9B9B3"></i>Desembolsos del mes</span><span><i style="background:var(--ink)"></i>Costo estabilizado</span><span><i style="background:var(--rech)"></i>Rechazados</span><span><i style="background:repeating-linear-gradient(135deg,#B9B9B3 0 3px,transparent 3px 6px);outline:1px solid #8E8E88"></i>Proyección</span></div>
+    <div class="legend"><span><i style="background:#B9B9B3"></i>Desembolsos del mes</span><span><i style="background:var(--ink)"></i>Costo estabilizado</span><span><i style="background:var(--rech)"></i>Rechazados por Experian</span><span><i style="background:var(--rech2)"></i>Rechazados en identidad o desembolso</span><span><i style="background:repeating-linear-gradient(135deg,#B9B9B3 0 3px,transparent 3px 6px);outline:1px solid #8E8E88"></i>Proyección</span></div>
   </div>
   <div class="panel">
     <p><b>El salto llegó en julio y agosto.</b> Las solicitudes con identificación pasaron de unas 2.000 al mes en el primer semestre a 7.146 en agosto y 7.706 en septiembre. Los usuarios viables en Experian se multiplicaron por cinco (de 126 en junio a 650 en septiembre), y con ellos los créditos.</p>
   </div>
   <div class="panel">
-    <p><b>Los rechazos crecieron al mismo ritmo.</b> De enero a julio se rechazaban entre 5 y 32 solicitudes al mes; en agosto fueron 213 y en septiembre 300, más que los créditos desembolsados (272). Casi todos se caen en la validación de identidad (295 de 300 en septiembre): es la mayor fuga del funnel y el punto donde más desembolsos se pueden recuperar sin pauta adicional (<a href="funnel-desembolsos.html">análisis del funnel</a>).</p>
+    <p><b>Los rechazos crecieron con el volumen.</b> Pasaron de unos 700 al mes en el primer semestre a 5.203 en agosto y 5.572 en septiembre. Casi todos los pone Experian (5.272 en septiembre), sobre todo por score: «No cumple score» explica 77% de las negaciones del año. Otros 300 se cayeron en la validación de identidad, más que los créditos desembolsados (272): es la fuga que más desembolsos puede recuperar sin pauta adicional (<a href="funnel-desembolsos.html">análisis del funnel</a>). Por eso excluimos de la pauta a los no aptos y alimentamos a Meta con los desembolsados.</p>
   </div>
 </section>
 
@@ -218,21 +220,21 @@
     <table>
       <thead><tr><th>Mes</th><th class="n">Inversión Meta</th><th class="n">Solicitudes con ID</th><th class="n">Viables Experian</th><th class="n">Desembolsos</th><th class="n">Rechazados</th><th class="n">Valor desembolsado</th><th class="n">Costo por desembolso</th></tr></thead>
       <tbody>
-        <tr><td>Enero</td><td class="n">$5.829.486</td><td class="n">1.954</td><td class="n">69</td><td class="n">12</td><td class="n">5</td><td class="n">$10,8 M</td><td class="n">$485.790</td></tr>
-        <tr><td>Febrero</td><td class="n">$5.886.515</td><td class="n">2.383</td><td class="n">118</td><td class="n">21</td><td class="n">12</td><td class="n">$17,0 M</td><td class="n">$280.310</td></tr>
-        <tr><td>Marzo</td><td class="n">$6.008.220</td><td class="n">2.200</td><td class="n">164</td><td class="n">54</td><td class="n">32</td><td class="n">$44,3 M</td><td class="n">$111.263</td></tr>
-        <tr><td>Abril</td><td class="n">$5.975.628</td><td class="n">2.284</td><td class="n">119</td><td class="n">62</td><td class="n">16</td><td class="n">$50,2 M</td><td class="n">$96.381</td></tr>
-        <tr><td>Mayo</td><td class="n">$5.989.775</td><td class="n">1.735</td><td class="n">99</td><td class="n">33</td><td class="n">9</td><td class="n">$27,9 M</td><td class="n">$181.508</td></tr>
-        <tr><td>Junio</td><td class="n">$5.567.053</td><td class="n">1.819</td><td class="n">126</td><td class="n">71</td><td class="n">16</td><td class="n">$61,6 M</td><td class="n">$78.409</td></tr>
-        <tr><td>Julio</td><td class="n">$7.387.830</td><td class="n">4.107</td><td class="n">195</td><td class="n">111</td><td class="n">8</td><td class="n">$86,2 M</td><td class="n">$66.557</td></tr>
-        <tr class="hi"><td>Agosto</td><td class="n">$7.371.068</td><td class="n">7.146</td><td class="n">613</td><td class="n">224</td><td class="n">213</td><td class="n">$150,2 M</td><td class="n">$32.907</td></tr>
-        <tr class="hi"><td>Septiembre</td><td class="n">$8.584.568</td><td class="n">7.706</td><td class="n">650</td><td class="n">272</td><td class="n">300</td><td class="n">$180,8 M</td><td class="n">$31.561</td></tr>
+        <tr><td>Enero</td><td class="n">$5.829.486</td><td class="n">1.954</td><td class="n">69</td><td class="n">12</td><td class="n">734</td><td class="n">$10,8 M</td><td class="n">$485.790</td></tr>
+        <tr><td>Febrero</td><td class="n">$5.886.515</td><td class="n">2.383</td><td class="n">118</td><td class="n">21</td><td class="n">791</td><td class="n">$17,0 M</td><td class="n">$280.310</td></tr>
+        <tr><td>Marzo</td><td class="n">$6.008.220</td><td class="n">2.200</td><td class="n">164</td><td class="n">54</td><td class="n">831</td><td class="n">$44,3 M</td><td class="n">$111.263</td></tr>
+        <tr><td>Abril</td><td class="n">$5.975.628</td><td class="n">2.284</td><td class="n">119</td><td class="n">62</td><td class="n">819</td><td class="n">$50,2 M</td><td class="n">$96.381</td></tr>
+        <tr><td>Mayo</td><td class="n">$5.989.775</td><td class="n">1.735</td><td class="n">99</td><td class="n">33</td><td class="n">627</td><td class="n">$27,9 M</td><td class="n">$181.508</td></tr>
+        <tr><td>Junio</td><td class="n">$5.567.053</td><td class="n">1.819</td><td class="n">126</td><td class="n">71</td><td class="n">725</td><td class="n">$61,6 M</td><td class="n">$78.409</td></tr>
+        <tr><td>Julio</td><td class="n">$7.387.830</td><td class="n">4.107</td><td class="n">195</td><td class="n">111</td><td class="n">2.069</td><td class="n">$86,2 M</td><td class="n">$66.557</td></tr>
+        <tr class="hi"><td>Agosto</td><td class="n">$7.371.068</td><td class="n">7.146</td><td class="n">613</td><td class="n">224</td><td class="n">5.203</td><td class="n">$150,2 M</td><td class="n">$32.907</td></tr>
+        <tr class="hi"><td>Septiembre</td><td class="n">$8.584.568</td><td class="n">7.706</td><td class="n">650</td><td class="n">272</td><td class="n">5.572</td><td class="n">$180,8 M</td><td class="n">$31.561</td></tr>
         <tr class="proj"><td>Octubre (proyección)</td><td class="n">$12.805.436</td><td class="n">—</td><td class="n">—</td><td class="n">≈277</td><td class="n">—</td><td class="n">—</td><td class="n">≈$46.000</td></tr>
         <tr class="proj"><td>Noviembre (1 al 8)</td><td class="n">$4.197.163</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="note">Fuentes: base de solicitudes de crédito digital de RIS con corte al 30 de septiembre de 2026; los desembolsos y rechazos se cuentan por mes de la solicitud. Rechazados = Desembolso «RECHAZADO» o «RECHAZADO_IDENTIDAD», o Validación de identidad «RECHAZADO». Octubre: 170 desembolsos al 19 de octubre en la base de clientes de RIS, proyectados a 31 días. Inversión: Meta Ads, único medio pagado hasta noviembre. Octubre y noviembre se cierran cuando RIS envíe la base actualizada.</p>
+  <p class="note">Fuentes: base de solicitudes de crédito digital de RIS con corte al 30 de septiembre de 2026; los desembolsos y rechazos se cuentan por mes de la solicitud. Rechazados = Decisión Experian «NEGADO», Desembolso «RECHAZADO» o «RECHAZADO_IDENTIDAD», o Validación de identidad «RECHAZADO» (cada solicitud se cuenta una vez; no incluye abandonos ni cancelaciones). Octubre: 170 desembolsos al 19 de octubre en la base de clientes de RIS, proyectados a 31 días. Inversión: Meta Ads, único medio pagado hasta noviembre. Octubre y noviembre se cierran cuando RIS envíe la base actualizada.</p>
 </section>
 
 </div>
