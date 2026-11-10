@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>RIS · Caso de éxito 2026</title>
-<meta name="description" content="Objetivo 2026 de RIS: bajar el costo por desembolso. De 12 a 272 desembolsos al mes y de $485.790 a $31.561 por desembolso, cómo lo logramos y por qué el siguiente paso es abrir nuevos medios. Corte a noviembre de 2026.">
+<meta name="description" content="Objetivo 2026 de RIS: bajar el costo por desembolso. De 12 a 272 desembolsos al mes y de $485.790 a $31.561 por desembolso, cómo lo logramos y por qué el siguiente paso es abrir nuevos medios. Cierre de octubre y meta de noviembre de 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/ris-reportes.css">
@@ -16,7 +16,7 @@
   .chart { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px 14px; display: grid; gap: 10px; }
   .chart h3 { font-size: 16px; }
   .chart .sub { font-size: 13px; color: var(--muted); margin-top: -6px; }
-  .cols { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; align-items: end; height: 220px; padding-top: 22px; border-bottom: 1px solid var(--line); position: relative; }
+  .cols { display: grid; grid-template-columns: repeat(11, 1fr); gap: 6px; align-items: end; height: 220px; padding-top: 22px; border-bottom: 1px solid var(--line); position: relative; }
   .col { position: relative; height: 100%; display: flex; align-items: flex-end; justify-content: center; cursor: default; }
   .col .b { width: min(100%, 34px); background: #B9B9B3; border-radius: 4px 4px 0 0; min-height: 2px; }
   .col.hi .b { background: var(--ink); }
@@ -33,7 +33,7 @@
   .col .b.r2, .col.hi .b.r2 { background: var(--rech2); border-radius: 0; min-height: 0; }
   .col.pair .bw.stack { flex-direction: column-reverse; justify-content: flex-start; }
   .col .v.r { color: var(--rech2); }
-  .xl { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
+  .xl { display: grid; grid-template-columns: repeat(11, 1fr); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
   .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
   .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
   .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 16px; }
@@ -52,8 +52,21 @@
   .estado.on { background: #E3F2E6; color: #1E7B34; border-color: #CDE6D2; }
   .eq { font-size: clamp(16px, 2.2vw, 19px); font-weight: 600; text-align: center; padding: 4px 0; }
   .eq b { background: var(--accent-soft); border-radius: 8px; padding: 2px 8px; }
+  .hbars { display: grid; gap: 12px; }
+  .hrow { display: grid; grid-template-columns: minmax(0, 210px) 1fr; gap: 12px; align-items: center; font-size: 13px; }
+  .hrow .lb b { display: block; font-size: 14px; color: var(--ink); }
+  .hrow .lb { color: var(--muted); line-height: 1.35; }
+  .htrack { position: relative; height: 26px; background: var(--panel); border-radius: 6px; }
+  .hfill { height: 100%; border-radius: 6px; background: #B9B9B3; }
+  .hfill.ris { background: var(--rech); }
+  .hval { position: absolute; top: 50%; transform: translateY(-50%); font-weight: 600; font-size: 13px; font-variant-numeric: tabular-nums; padding-left: 8px; }
+  .hgroup { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+  @media (max-width: 600px) { .hrow { grid-template-columns: 1fr; gap: 4px; } }
   td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
   tr.hi td { background: var(--accent-soft); }
+  .col.meta .b { background: var(--accent-soft); outline: 2px dashed var(--accent); outline-offset: -2px; }
+  .col.meta .v { color: #8A6A00; }
+  tr.meta td { background: var(--accent-soft); font-weight: 600; }
   tr.proj td { color: var(--muted); font-style: italic; }
   @media (max-width: 600px) {
     .cols, .xl { gap: 3px; }
@@ -69,7 +82,7 @@
 <header class="top">
   <a class="back" href="index.html">← Todos los documentos</a>
   <div class="brand"><i></i>ADCOM <span class="sep">×</span> RIS</div>
-  <h1>Objetivo 2026: bajar el costo por desembolso <span>caso de éxito · corte a noviembre</span></h1>
+  <h1>Objetivo 2026: bajar el costo por desembolso <span>caso de éxito · cierre de octubre</span></h1>
   <p>En enero cada crédito desembolsado nos costaba cerca de medio millón de pesos en pauta. En septiembre costó $31.561, con 23 veces más créditos al mes. Cómo lo logramos, dónde se estabilizó el costo y por qué el siguiente paso es abrir nuevos medios.</p>
 </header>
 
@@ -91,9 +104,9 @@
     <p class="eyebrow">Volumen</p>
     <h2>Los desembolsos crecieron mes a mes</h2>
   </div>
-  <div class="chart" role="img" aria-label="Desembolsos y rechazados por mes en 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre unos 277 proyectados. Rechazados (Experian más identidad o desembolso): enero 734, febrero 791, marzo 831, abril 819, mayo 627, junio 725, julio 2.069, agosto 5.203, septiembre 5.572.">
+  <div class="chart" role="img" aria-label="Desembolsos y rechazados por mes en 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre 285, meta de noviembre 750. Rechazados (Experian más identidad o desembolso): enero 734, febrero 791, marzo 831, abril 819, mayo 627, junio 725, julio 2.069, agosto 5.203, septiembre 5.572.">
     <h3>Créditos desembolsados y rechazados por mes, 2026</h3>
-    <p class="sub">Por mes de la solicitud. Rechazados: todas las solicitudes negadas por Experian o rechazadas por RIS en la validación de identidad o en el desembolso. Octubre es una proyección.</p>
+    <p class="sub">Por mes de la solicitud. Rechazados: todas las solicitudes negadas por Experian o rechazadas por RIS en la validación de identidad o en el desembolso. Octubre: cierre del mes; los rechazados de octubre llegan con la próxima base de RIS. Noviembre: meta.</p>
     <div class="cols">
       <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.2%"></div><span class="v" style="bottom:calc(0.2% + 4px)">12</span></div><div class="bw stack"><div class="b r2" style="height:0.1%"></div><div class="b r" style="height:12.6%"></div><span class="v r" style="bottom:calc(12.7% + 4px)">734</span></div><span class="tip">Enero: 12 desembolsos · $10,8 M<br>734 rechazados: 729 por Experian · 5 en identidad o desembolso</span></div>
       <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.4%"></div></div><div class="bw stack"><div class="b r2" style="height:0.2%"></div><div class="b r" style="height:13.4%"></div></div><span class="tip">Febrero: 21 desembolsos · $17,0 M<br>791 rechazados: 779 por Experian · 12 en identidad o desembolso</span></div>
@@ -104,10 +117,11 @@
       <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:1.9%"></div><span class="v" style="bottom:calc(1.9% + 4px)">111</span></div><div class="bw stack"><div class="b r2" style="height:0.1%"></div><div class="b r" style="height:35.5%"></div><span class="v r" style="bottom:calc(35.6% + 4px)">2.069</span></div><span class="tip">Julio: 111 desembolsos · $86,2 M<br>2.069 rechazados: 2.061 por Experian · 8 en identidad o desembolso</span></div>
       <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:3.9%"></div><span class="v" style="bottom:calc(3.9% + 4px)">224</span></div><div class="bw stack"><div class="b r2" style="height:3.7%"></div><div class="b r" style="height:86.0%"></div><span class="v r" style="bottom:calc(89.7% + 4px)">5.203</span></div><span class="tip">Agosto: 224 desembolsos · $150,2 M<br>5.203 rechazados: 4.990 por Experian · 213 en identidad o desembolso</span></div>
       <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:4.7%"></div><span class="v" style="bottom:calc(4.7% + 4px)">272</span></div><div class="bw stack"><div class="b r2" style="height:5.2%"></div><div class="b r" style="height:90.9%"></div><span class="v r" style="bottom:calc(96.1% + 4px)">5.572</span></div><span class="tip">Septiembre: 272 desembolsos · $180,8 M<br>5.572 rechazados: 5.272 por Experian · 300 en identidad o desembolso</span></div>
-      <div class="col pair proj" tabindex="0"><div class="bw"><div class="b" style="height:4.8%"></div><span class="v" style="bottom:calc(4.8% + 4px)">≈277</span></div><div class="bw"></div><span class="tip">Octubre: ≈277 desembolsos proyectados (170 al 19 de oct) · rechazados sin base aún</span></div>
+      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:4.9%"></div><span class="v" style="bottom:calc(4.9% + 4px)">285</span></div><div class="bw"></div><span class="tip">Octubre: 285 desembolsos (cierre del mes) · rechazados: falta la base de RIS</span></div>
+      <div class="col pair meta" tabindex="0"><div class="bw"><div class="b" style="height:12.9%"></div><span class="v" style="bottom:calc(12.9% + 4px)">750</span></div><div class="bw"></div><span class="tip">Noviembre: meta de 750 desembolsos con $21 M</span></div>
     </div>
-    <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span></div>
-    <div class="legend"><span><i style="background:#B9B9B3"></i>Desembolsos del mes</span><span><i style="background:var(--ink)"></i>Costo estabilizado</span><span><i style="background:var(--rech)"></i>Rechazados por Experian</span><span><i style="background:var(--rech2)"></i>Rechazados en identidad o desembolso</span><span><i style="background:repeating-linear-gradient(135deg,#B9B9B3 0 3px,transparent 3px 6px);outline:1px solid #8E8E88"></i>Proyección</span></div>
+    <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov · meta</span></div>
+    <div class="legend"><span><i style="background:#B9B9B3"></i>Desembolsos del mes</span><span><i style="background:var(--ink)"></i>Costo estabilizado</span><span><i style="background:var(--rech)"></i>Rechazados por Experian</span><span><i style="background:var(--rech2)"></i>Rechazados en identidad o desembolso</span><span><i style="background:var(--accent-soft);outline:1.5px dashed var(--accent)"></i>Meta de noviembre</span></div>
   </div>
   <div class="panel">
     <p><b>El salto llegó en julio y agosto.</b> Las solicitudes con identificación pasaron de unas 2.000 al mes en el primer semestre a 7.146 en agosto y 7.706 en septiembre. Los usuarios viables en Experian se multiplicaron por cinco (de 126 en junio a 650 en septiembre), y con ellos los créditos.</p>
@@ -117,12 +131,44 @@
   </div>
 </section>
 
+<section class="section" id="denegados">
+  <div class="section-head">
+    <p class="eyebrow">Aprobación</p>
+    <h2>Experian niega 9 de cada 10 solicitudes de RIS; Sistecrédito declara negar 1 de cada 4</h2>
+  </div>
+  <div class="chart" role="img" aria-label="Porcentaje de solicitudes denegadas. RIS: 89% en septiembre de 2026 y 88,6% de enero a septiembre. Sistecrédito, según cifras públicas: 27% (sitio para aliados), 20% (Forbes 2021) y 15% (canal LuegoPago).">
+    <h3>Solicitudes denegadas en el estudio de crédito</h3>
+    <p class="sub">RIS: negadas por Experian sobre las solicitudes que llegaron a consulta. Sistecrédito: 100% menos la tasa de aprobación que reporta cada fuente.</p>
+    <div class="hbars">
+      <p class="hgroup">RIS · base de solicitudes</p>
+      <div class="hrow"><div class="lb"><b>RIS · septiembre 2026</b>5.272 negadas de 5.922 consultadas</div><div class="htrack"><div class="hfill ris" style="width:89.0%"></div><span class="hval" style="left:89.0%">89%</span></div></div>
+      <div class="hrow"><div class="lb"><b>RIS · enero a septiembre</b>16.760 negadas de 18.913 consultadas</div><div class="htrack"><div class="hfill ris" style="width:88.6%"></div><span class="hval" style="left:88.6%">88,6%</span></div></div>
+      <p class="hgroup">Sistecrédito · cifras públicas</p>
+      <div class="hrow"><div class="lb"><b>Sistecrédito · sitio para aliados</b>Aprobación declarada 73%, periodo no indicado</div><div class="htrack"><div class="hfill " style="width:27%"></div><span class="hval" style="left:27%">27%</span></div></div>
+      <div class="hrow"><div class="lb"><b>Sistecrédito · Forbes 2021</b>Aprobación reportada 80%</div><div class="htrack"><div class="hfill " style="width:20%"></div><span class="hval" style="left:20%">20%</span></div></div>
+      <div class="hrow"><div class="lb"><b>Sistecrédito · canal LuegoPago</b>Aprobación declarada 85%</div><div class="htrack"><div class="hfill " style="width:15%"></div><span class="hval" style="left:15%">15%</span></div></div>
+    </div>
+  </div>
+  <div class="two">
+    <div class="panel">
+      <p><b>La brecha no está en la pauta, está en la política de crédito.</b> Cada mes de 2026 Experian negó entre 83% y 91% de las solicitudes de RIS, y «No cumple score» explica 77% de esas negaciones. Más inversión trae más solicitudes, pero con esta política nueve de cada diez se quedan en el estudio.</p>
+    </div>
+    <div class="panel">
+      <p><b>Qué hace distinto Sistecrédito, según su información pública:</b> además de centrales de riesgo, su autorización de datos contempla fuentes alternativas (seguridad social, antigüedad del correo, datos del dispositivo, biometría) y analítica con inteligencia artificial. Declara que la mitad de sus clientes no está bancarizada, y su crédito promedio es de unos $350.000, frente a unos $665.000 por desembolso en RIS en septiembre.</p>
+    </div>
+  </div>
+  <div class="panel">
+    <p><b>Qué vale un punto de aprobación:</b> con el volumen de septiembre (5.922 solicitudes consultadas y 42% de viables que terminan en desembolso), cada punto adicional de aprobación en Experian serían unos 59 viables y unos 25 desembolsos más al mes, con la misma inversión. Proponemos revisar con RIS si es posible un segundo filtro o datos alternativos para quienes hoy se niegan solo por score.</p>
+  </div>
+  <p class="note">Las cifras no son directamente comparables: Sistecrédito no publica el periodo, la población ni su definición de «solicitud aprobada», y su producto es crédito de bajo monto en comercios aliados. Son tasas declaradas, no auditadas. Fuentes: <a href="https://www.sistecredito.com/preguntas-aliados/">Sistecrédito, preguntas para aliados</a> · <a href="https://forbes.co/negocios/como-una-empresa-de-antioquia-ha-hecho-compre-ahora-pague-despues-desde-hace-25-anos">Forbes Colombia (2021)</a> · <a href="https://www.larepublica.co/finanzas/alvaro-villegas-fundador-de-sistecredito-explico-como-otorgan-mas-de-un-millon-de-creditos-al-mes-4507640">La República (2026)</a> · <a href="https://www.sistecredito.com/legal-autorizacion-a-centrales/">autorización de datos de Sistecrédito</a>. RIS: base de solicitudes con corte al 30 de septiembre de 2026.</p>
+</section>
+
 <section class="section">
   <div class="section-head">
     <p class="eyebrow">Costo</p>
     <h2>El costo por desembolso se estabilizó en unos $32.000</h2>
   </div>
-  <div class="chart" role="img" aria-label="Costo por desembolso por mes en 2026: enero 485.790, febrero 280.310, marzo 111.263, abril 96.381, mayo 181.508, junio 78.409, julio 66.557, agosto 32.907, septiembre 31.561, octubre unos 46.000 proyectados">
+  <div class="chart" role="img" aria-label="Costo por desembolso por mes en 2026: enero 485.790, febrero 280.310, marzo 111.263, abril 96.381, mayo 181.508, junio 78.409, julio 66.557, agosto 32.907, septiembre 31.561, octubre 44.931, meta de noviembre 28.000">
     <h3>Costo por desembolso en Meta, 2026</h3>
     <p class="sub">Inversión del mes dividida entre los desembolsos de las solicitudes de ese mes.</p>
     <div class="cols">
@@ -135,16 +181,17 @@
       <div class="col" tabindex="0"><div class="b" style="height:13.7%"></div><span class="tip">Julio: $66.557 · $7,4 M invertidos</span></div>
       <div class="col hi" tabindex="0"><div class="b" style="height:6.8%"></div><span class="v" style="bottom:calc(6.8% + 4px)">$32,9K</span><span class="tip">Agosto: $32.907 · $7,4 M invertidos</span></div>
       <div class="col hi" tabindex="0"><div class="b" style="height:6.5%"></div><span class="v" style="bottom:calc(6.5% + 4px)">$31,6K</span><span class="tip">Septiembre: $31.561 · $8,6 M invertidos</span></div>
-      <div class="col proj" tabindex="0"><div class="b" style="height:9.5%"></div><span class="v" style="bottom:calc(9.5% + 4px)">≈$46K</span><span class="tip">Octubre: ≈$46.000 proyectado · $12,8 M invertidos</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:9.2%"></div><span class="v" style="bottom:calc(9.2% + 4px)">$44,9K</span><span class="tip">Octubre: $44.931 · $12,8 M invertidos · 285 desembolsos</span></div>
+      <div class="col meta" tabindex="0"><div class="b" style="height:5.8%"></div><span class="v" style="bottom:calc(5.8% + 4px)">$28K</span><span class="tip">Noviembre: meta de $28.000 por desembolso ($21 M ÷ 750)</span></div>
     </div>
-    <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span></div>
+    <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov · meta</span></div>
   </div>
   <div class="two">
     <div class="panel">
       <p><b>Agosto y septiembre son el costo estabilizado:</b> $32.907 y $31.561 por desembolso, dentro del rango de $28.000 a $32.000 que planteó el flow general. Dos meses seguidos en ese nivel, con más volumen en el segundo, muestran que el resultado no fue un pico aislado.</p>
     </div>
     <div class="panel">
-      <p><b>Octubre confirmó el límite de Meta.</b> La inversión subió 49% ($8,6 M a $12,8 M) y los desembolsos quedaron casi iguales (≈277 frente a 272), así que el costo subió a unos $46.000. En los días de mayor inversión, cada desembolso costó más del doble que en los de inversión baja (<a href="plan-de-choque.html">plan de choque</a>).</p>
+      <p><b>Octubre confirmó el límite de Meta.</b> La inversión subió 49% ($8,6 M a $12,8 M) y los desembolsos solo 5% (285 frente a 272), así que el costo subió a $44.931 y se cumplió 57% del objetivo de 500. En los días de mayor inversión, cada desembolso costó más del doble que en los de inversión baja (<a href="plan-de-choque.html">plan de choque</a>). <b>Noviembre</b> sube la meta a 750 desembolsos a $28.000 con $21 M, sumando Google Search.</p>
     </div>
   </div>
 </section>
@@ -161,7 +208,7 @@
       <li><span class="d">Jun – jul</span><div><b class="t">Toda la inversión hacia la solicitud</b><p>Salieron las campañas de seguidores e interacciones. Solicitud de crédito pasó de $3,4 M en mayo a $6,0 M en julio, y las solicitudes completadas en el píxel, de 13 a 141 al mes.</p></div></li>
       <li><span class="d">Ago – sep</span><div><b class="t">Costo estabilizado</b><p>Con $7,4 a $8,6 M al mes en Meta, el costo por desembolso se mantuvo en unos $32.000 y los desembolsos subieron a 224 y 272.</p></div></li>
       <li><span class="d">Oct</span><div><b class="t">Plan de choque y datos de RIS en Meta</b><p>Subimos la base de RIS a Meta: excluimos a 2.992 solicitudes no aptas, creamos remarketing para quienes no terminaron, un Lookalike de los 656 clientes desembolsados y el evento «Desembolso» por API de conversiones. Así Meta aprende qué es un buen cliente. Con el <a href="funnel-desembolsos.html">análisis del funnel</a> ubicamos la mayor fuga en la validación de identidad.</p></div></li>
-      <li><span class="d">Nov</span><div><b class="t">Primer medio nuevo</b><p>Flow de $21 M (Meta $18 M y Google $3 M). Todos los anuncios llevan a la página principal y Google Search de solicitud de crédito ya está activo (<a href="implementacion-google-search-2026-11-06.html">implementación</a>).</p></div></li>
+      <li><span class="d">Nov</span><div><b class="t">Primer medio nuevo</b><p>Flow de $21 M (Meta $18 M y Google $3 M) con meta de 750 desembolsos a $28.000. Todos los anuncios llevan a la página principal y Google Search de solicitud de crédito ya está activo (<a href="implementacion-google-search-2026-11-06.html">implementación</a>).</p></div></li>
     </ol>
   </div>
 </section>
@@ -229,12 +276,12 @@
         <tr><td>Julio</td><td class="n">$7.387.830</td><td class="n">4.107</td><td class="n">195</td><td class="n">111</td><td class="n">2.069</td><td class="n">$86,2 M</td><td class="n">$66.557</td></tr>
         <tr class="hi"><td>Agosto</td><td class="n">$7.371.068</td><td class="n">7.146</td><td class="n">613</td><td class="n">224</td><td class="n">5.203</td><td class="n">$150,2 M</td><td class="n">$32.907</td></tr>
         <tr class="hi"><td>Septiembre</td><td class="n">$8.584.568</td><td class="n">7.706</td><td class="n">650</td><td class="n">272</td><td class="n">5.572</td><td class="n">$180,8 M</td><td class="n">$31.561</td></tr>
-        <tr class="proj"><td>Octubre (proyección)</td><td class="n">$12.805.436</td><td class="n">—</td><td class="n">—</td><td class="n">≈277</td><td class="n">—</td><td class="n">—</td><td class="n">≈$46.000</td></tr>
-        <tr class="proj"><td>Noviembre (1 al 8)</td><td class="n">$4.197.163</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr><td>Octubre</td><td class="n">$12.805.436</td><td class="n">—</td><td class="n">—</td><td class="n">285</td><td class="n">—</td><td class="n">—</td><td class="n">$44.931</td></tr>
+        <tr class="meta"><td>Noviembre (meta)</td><td class="n">$21.000.000*</td><td class="n">—</td><td class="n">—</td><td class="n">750</td><td class="n">—</td><td class="n">—</td><td class="n">$28.000</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="note">Fuentes: base de solicitudes de crédito digital de RIS con corte al 30 de septiembre de 2026; los desembolsos y rechazos se cuentan por mes de la solicitud. Rechazados = Decisión Experian «NEGADO», Desembolso «RECHAZADO» o «RECHAZADO_IDENTIDAD», o Validación de identidad «RECHAZADO» (cada solicitud se cuenta una vez; no incluye abandonos ni cancelaciones). Octubre: 170 desembolsos al 19 de octubre en la base de clientes de RIS, proyectados a 31 días. Inversión: Meta Ads, único medio pagado hasta noviembre. Octubre y noviembre se cierran cuando RIS envíe la base actualizada.</p>
+  <p class="note">Fuentes: base de solicitudes de crédito digital de RIS con corte al 30 de septiembre de 2026; los desembolsos y rechazos se cuentan por mes de la solicitud. Rechazados = Decisión Experian «NEGADO», Desembolso «RECHAZADO» o «RECHAZADO_IDENTIDAD», o Validación de identidad «RECHAZADO» (cada solicitud se cuenta una vez; no incluye abandonos ni cancelaciones). Octubre: cierre del reporte de Meta (Looker) con 285 créditos exitosos y $44.931 por desembolso; los rechazados y el valor desembolsado de octubre se completan con la próxima base de RIS. *Noviembre: presupuesto del flow ($18 M Meta y $3 M Google) y meta de 750 desembolsos a $28.000. Inversión: Meta Ads, único medio pagado hasta octubre.</p>
 </section>
 
 </div>
