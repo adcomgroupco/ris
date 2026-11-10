@@ -16,7 +16,7 @@
   .chart { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px 14px; display: grid; gap: 10px; }
   .chart h3 { font-size: 16px; }
   .chart .sub { font-size: 13px; color: var(--muted); margin-top: -6px; }
-  .cols { display: grid; grid-template-columns: repeat(11, 1fr); gap: 6px; align-items: end; height: 220px; padding-top: 22px; border-bottom: 1px solid var(--line); position: relative; }
+  .cols { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px; align-items: end; height: 220px; padding-top: 22px; border-bottom: 1px solid var(--line); position: relative; }
   .col { position: relative; height: 100%; display: flex; align-items: flex-end; justify-content: center; cursor: default; }
   .col .b { width: min(100%, 34px); background: #B9B9B3; border-radius: 4px 4px 0 0; min-height: 2px; }
   .col.hi .b { background: var(--ink); }
@@ -33,7 +33,16 @@
   .col .b.r2, .col.hi .b.r2 { background: var(--rech2); border-radius: 0; min-height: 0; }
   .col.pair .bw.stack { flex-direction: column-reverse; justify-content: flex-start; }
   .col .v.r { color: var(--rech2); }
-  .xl { display: grid; grid-template-columns: repeat(11, 1fr); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
+  .plabel { font-size: 13px; font-weight: 600; margin-top: 6px; }
+  .plabel span { font-weight: 400; color: var(--muted); margin-left: 6px; }
+  .plabel.r { color: var(--rech2); }
+  .cols.short { height: 150px; }
+  .col.rj .stk { width: min(100%, 34px); display: flex; flex-direction: column-reverse; border-radius: 4px 4px 0 0; overflow: hidden; min-height: 2px; }
+  .col.rj .stk .b { width: 100%; border-radius: 0; min-height: 0; }
+  .col.rj:hover .stk, .col.rj:focus .stk { filter: brightness(.9); }
+  .col .v.nd { color: var(--muted); font-weight: 400; font-style: italic; }
+  .xl.ratio .rt b { display: inline-block; min-width: 34px; padding: 3px 6px; border-radius: 99px; background: #FBE4DE; color: var(--rech2); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .xl { display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 6px; font-size: 12px; color: var(--muted); text-align: center; }
   .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--muted); }
   .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
   .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 16px; }
@@ -72,6 +81,10 @@
     .cols, .xl { gap: 3px; }
     .col .v { font-size: 10px; }
     .xl { font-size: 10px; }
+    .cols, .xl { gap: 2px; }
+    .col .v { font-size: 9px; letter-spacing: -.02em; }
+    .xl { font-size: 9px; }
+    .xl.ratio .rt b { min-width: 0; padding: 2px 3px; font-size: 10px; }
     .timeline li { grid-template-columns: 1fr; gap: 2px; }
   }
 </style>
@@ -104,24 +117,42 @@
     <p class="eyebrow">Volumen</p>
     <h2>Los desembolsos crecieron mes a mes</h2>
   </div>
-  <div class="chart" role="img" aria-label="Desembolsos y rechazados por mes en 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre 285, meta de noviembre 750. Rechazados (Experian más identidad o desembolso): enero 734, febrero 791, marzo 831, abril 819, mayo 627, junio 725, julio 2.069, agosto 5.203, septiembre 5.572.">
+  <div class="chart" role="img" aria-label="Dos paneles por mes, 2026. Desembolsos: enero 12, febrero 21, marzo 54, abril 62, mayo 33, junio 71, julio 111, agosto 224, septiembre 272, octubre 285, meta de noviembre 750. Rechazados: enero 734, febrero 791, marzo 831, abril 819, mayo 627, junio 725, julio 2.069, agosto 5.203, septiembre 5.572. Rechazados por cada desembolso: enero 61, febrero 38, marzo 15, abril 13, mayo 19, junio 10, julio 19, agosto 23, septiembre 20.">
     <h3>Créditos desembolsados y rechazados por mes, 2026</h3>
-    <p class="sub">Por mes de la solicitud. Rechazados: todas las solicitudes negadas por Experian o rechazadas por RIS en la validación de identidad o en el desembolso. Octubre: cierre del mes; los rechazados de octubre llegan con la próxima base de RIS. Noviembre: meta.</p>
+    <p class="sub">Por mes de la solicitud. Cada panel tiene su propia escala: los rechazados son unas 20 veces más que los desembolsos. Octubre: cierre del mes. Noviembre: meta.</p>
+    <p class="plabel">Desembolsos</p>
     <div class="cols">
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.2%"></div><span class="v" style="bottom:calc(0.2% + 4px)">12</span></div><div class="bw stack"><div class="b r2" style="height:0.1%"></div><div class="b r" style="height:12.6%"></div><span class="v r" style="bottom:calc(12.7% + 4px)">734</span></div><span class="tip">Enero: 12 desembolsos · $10,8 M<br>734 rechazados: 729 por Experian · 5 en identidad o desembolso</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.4%"></div></div><div class="bw stack"><div class="b r2" style="height:0.2%"></div><div class="b r" style="height:13.4%"></div></div><span class="tip">Febrero: 21 desembolsos · $17,0 M<br>791 rechazados: 779 por Experian · 12 en identidad o desembolso</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.9%"></div></div><div class="bw stack"><div class="b r2" style="height:0.6%"></div><div class="b r" style="height:13.8%"></div></div><span class="tip">Marzo: 54 desembolsos · $44,3 M<br>831 rechazados: 799 por Experian · 32 en identidad o desembolso</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:1.1%"></div></div><div class="bw stack"><div class="b r2" style="height:0.3%"></div><div class="b r" style="height:13.8%"></div></div><span class="tip">Abril: 62 desembolsos · $50,2 M<br>819 rechazados: 803 por Experian · 16 en identidad o desembolso</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:0.6%"></div></div><div class="bw stack"><div class="b r2" style="height:0.2%"></div><div class="b r" style="height:10.7%"></div></div><span class="tip">Mayo: 33 desembolsos · $27,9 M<br>627 rechazados: 618 por Experian · 9 en identidad o desembolso</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:1.2%"></div></div><div class="bw stack"><div class="b r2" style="height:0.3%"></div><div class="b r" style="height:12.2%"></div></div><span class="tip">Junio: 71 desembolsos · $61,6 M<br>725 rechazados: 709 por Experian · 16 en identidad o desembolso</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:1.9%"></div><span class="v" style="bottom:calc(1.9% + 4px)">111</span></div><div class="bw stack"><div class="b r2" style="height:0.1%"></div><div class="b r" style="height:35.5%"></div><span class="v r" style="bottom:calc(35.6% + 4px)">2.069</span></div><span class="tip">Julio: 111 desembolsos · $86,2 M<br>2.069 rechazados: 2.061 por Experian · 8 en identidad o desembolso</span></div>
-      <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:3.9%"></div><span class="v" style="bottom:calc(3.9% + 4px)">224</span></div><div class="bw stack"><div class="b r2" style="height:3.7%"></div><div class="b r" style="height:86.0%"></div><span class="v r" style="bottom:calc(89.7% + 4px)">5.203</span></div><span class="tip">Agosto: 224 desembolsos · $150,2 M<br>5.203 rechazados: 4.990 por Experian · 213 en identidad o desembolso</span></div>
-      <div class="col pair hi" tabindex="0"><div class="bw"><div class="b" style="height:4.7%"></div><span class="v" style="bottom:calc(4.7% + 4px)">272</span></div><div class="bw stack"><div class="b r2" style="height:5.2%"></div><div class="b r" style="height:90.9%"></div><span class="v r" style="bottom:calc(96.1% + 4px)">5.572</span></div><span class="tip">Septiembre: 272 desembolsos · $180,8 M<br>5.572 rechazados: 5.272 por Experian · 300 en identidad o desembolso</span></div>
-      <div class="col pair" tabindex="0"><div class="bw"><div class="b" style="height:4.9%"></div><span class="v" style="bottom:calc(4.9% + 4px)">285</span></div><div class="bw"></div><span class="tip">Octubre: 285 desembolsos (cierre del mes) · rechazados: falta la base de RIS</span></div>
-      <div class="col pair meta" tabindex="0"><div class="bw"><div class="b" style="height:12.9%"></div><span class="v" style="bottom:calc(12.9% + 4px)">750</span></div><div class="bw"></div><span class="tip">Noviembre: meta de 750 desembolsos con $21 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:1.6%"></div><span class="v" style="bottom:calc(1.6% + 4px)">12</span><span class="tip">Enero: 12 desembolsos · $10,8 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:2.8%"></div><span class="v" style="bottom:calc(2.8% + 4px)">21</span><span class="tip">Febrero: 21 desembolsos · $17,0 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:7.2%"></div><span class="v" style="bottom:calc(7.2% + 4px)">54</span><span class="tip">Marzo: 54 desembolsos · $44,3 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:8.3%"></div><span class="v" style="bottom:calc(8.3% + 4px)">62</span><span class="tip">Abril: 62 desembolsos · $50,2 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:4.4%"></div><span class="v" style="bottom:calc(4.4% + 4px)">33</span><span class="tip">Mayo: 33 desembolsos · $27,9 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:9.5%"></div><span class="v" style="bottom:calc(9.5% + 4px)">71</span><span class="tip">Junio: 71 desembolsos · $61,6 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:14.8%"></div><span class="v" style="bottom:calc(14.8% + 4px)">111</span><span class="tip">Julio: 111 desembolsos · $86,2 M</span></div>
+      <div class="col hi" tabindex="0"><div class="b" style="height:29.9%"></div><span class="v" style="bottom:calc(29.9% + 4px)">224</span><span class="tip">Agosto: 224 desembolsos · $150,2 M</span></div>
+      <div class="col hi" tabindex="0"><div class="b" style="height:36.3%"></div><span class="v" style="bottom:calc(36.3% + 4px)">272</span><span class="tip">Septiembre: 272 desembolsos · $180,8 M</span></div>
+      <div class="col" tabindex="0"><div class="b" style="height:38.0%"></div><span class="v" style="bottom:calc(38.0% + 4px)">285</span><span class="tip">Octubre: 285 desembolsos (cierre del mes)</span></div>
+      <div class="col meta" tabindex="0"><div class="b" style="height:100.0%"></div><span class="v" style="bottom:calc(100.0% + 4px)">750</span><span class="tip">Noviembre: meta de 750 desembolsos con $21 M</span></div>
     </div>
     <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov · meta</span></div>
-    <div class="legend"><span><i style="background:#B9B9B3"></i>Desembolsos del mes</span><span><i style="background:var(--ink)"></i>Costo estabilizado</span><span><i style="background:var(--rech)"></i>Rechazados por Experian</span><span><i style="background:var(--rech2)"></i>Rechazados en identidad o desembolso</span><span><i style="background:var(--accent-soft);outline:1.5px dashed var(--accent)"></i>Meta de noviembre</span></div>
+    <p class="plabel r">Rechazados <span>Experian + identidad o desembolso</span></p>
+    <div class="cols short">
+      <div class="col rj" tabindex="0"><div class="stk" style="height:12.7%"><div class="b r" style="flex:729"></div><div class="b r2" style="flex:5"></div></div><span class="v r" style="bottom:calc(12.7% + 4px)">734</span><span class="tip">Enero: 734 rechazados<br>729 por Experian · 5 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:13.6%"><div class="b r" style="flex:779"></div><div class="b r2" style="flex:12"></div></div><span class="v r" style="bottom:calc(13.6% + 4px)">791</span><span class="tip">Febrero: 791 rechazados<br>779 por Experian · 12 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:14.4%"><div class="b r" style="flex:799"></div><div class="b r2" style="flex:32"></div></div><span class="v r" style="bottom:calc(14.4% + 4px)">831</span><span class="tip">Marzo: 831 rechazados<br>799 por Experian · 32 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:14.1%"><div class="b r" style="flex:803"></div><div class="b r2" style="flex:16"></div></div><span class="v r" style="bottom:calc(14.1% + 4px)">819</span><span class="tip">Abril: 819 rechazados<br>803 por Experian · 16 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:10.9%"><div class="b r" style="flex:618"></div><div class="b r2" style="flex:9"></div></div><span class="v r" style="bottom:calc(10.9% + 4px)">627</span><span class="tip">Mayo: 627 rechazados<br>618 por Experian · 9 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:12.5%"><div class="b r" style="flex:709"></div><div class="b r2" style="flex:16"></div></div><span class="v r" style="bottom:calc(12.5% + 4px)">725</span><span class="tip">Junio: 725 rechazados<br>709 por Experian · 16 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:35.6%"><div class="b r" style="flex:2061"></div><div class="b r2" style="flex:8"></div></div><span class="v r" style="bottom:calc(35.6% + 4px)">2.069</span><span class="tip">Julio: 2.069 rechazados<br>2.061 por Experian · 8 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:89.7%"><div class="b r" style="flex:4990"></div><div class="b r2" style="flex:213"></div></div><span class="v r" style="bottom:calc(89.7% + 4px)">5.203</span><span class="tip">Agosto: 5.203 rechazados<br>4.990 por Experian · 213 en identidad o desembolso</span></div>
+      <div class="col rj" tabindex="0"><div class="stk" style="height:96.1%"><div class="b r" style="flex:5272"></div><div class="b r2" style="flex:300"></div></div><span class="v r" style="bottom:calc(96.1% + 4px)">5.572</span><span class="tip">Septiembre: 5.572 rechazados<br>5.272 por Experian · 300 en identidad o desembolso</span></div>
+      <div class="col rj"><span class="v nd" style="bottom:4px">sin base</span></div>
+      <div class="col rj"><span class="v nd" style="bottom:4px"></span></div>
+    </div>
+    <div class="xl"><span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May</span><span>Jun</span><span>Jul</span><span>Ago</span><span>Sep</span><span>Oct</span><span>Nov · meta</span></div>
+    <p class="plabel">Rechazados por cada desembolso <span>menos es mejor</span></p>
+    <div class="xl ratio"><span class="rt"><b>61</b></span><span class="rt"><b>38</b></span><span class="rt"><b>15</b></span><span class="rt"><b>13</b></span><span class="rt"><b>19</b></span><span class="rt"><b>10</b></span><span class="rt"><b>19</b></span><span class="rt"><b>23</b></span><span class="rt"><b>20</b></span><span class="rt"><b>—</b></span><span class="rt"><b>—</b></span></div>
+    <div class="legend"><span><i style="background:#B9B9B3"></i>Desembolsos del mes</span><span><i style="background:var(--ink)"></i>Costo estabilizado</span><span><i style="background:var(--accent-soft);outline:1.5px dashed var(--accent)"></i>Meta de noviembre</span><span><i style="background:var(--rech)"></i>Rechazados por Experian</span><span><i style="background:var(--rech2)"></i>Rechazados en identidad o desembolso</span></div>
   </div>
   <div class="panel">
     <p><b>El salto llegó en julio y agosto.</b> Las solicitudes con identificación pasaron de unas 2.000 al mes en el primer semestre a 7.146 en agosto y 7.706 en septiembre. Los usuarios viables en Experian se multiplicaron por cinco (de 126 en junio a 650 en septiembre), y con ellos los créditos.</p>
