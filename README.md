@@ -7,6 +7,7 @@ Sitio de consulta de reportes, propuestas y plan de acción de Meta Ads para RIS
 - `index.html`: página principal.
 - `reporte-semanal.html`: reporte semanal de Meta con filtro de fechas, frente a las metas del flow.
 - `implementacion-google-search-2026-11-06.html`: implementación de la campaña de Google Search de solicitud de crédito: ficha técnica, landing, anuncios, palabras clave, negativas y recursos.
+- `implementacion-google-demandgen-gmail-2026-11-13.html`: implementación de Demand Gen solo Gmail (solicitud de crédito): ficha técnica, vista en Gmail, piezas, textos, audiencia y reparto del presupuesto de Google.
 - `ruta-750-desembolsos.html`: ruta a 750 desembolsos de noviembre 2026: cierre de octubre, cuello de botella en identidad, escenarios, Google y remarketing, compromisos ADCOM y RIS.
 - `plan-de-choque.html`: plan de choque de octubre 2026: rendimientos decrecientes, prioridades con RIS y acciones en Meta.
 - `funnel-desembolsos.html`: funnel de desembolsos octubre vs septiembre (días 1–13) y plan conjunto con RIS.

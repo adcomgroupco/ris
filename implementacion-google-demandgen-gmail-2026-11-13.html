@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>RIS · Demand Gen Gmail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/ris-reportes.css">
+<style>
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.cfg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:0;overflow:hidden}
+.cfg>div{padding:16px 18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);min-width:0;display:grid;gap:4px}
+.cfg>div:nth-child(3n){border-right:0}
+.cfg .wide{grid-column:1/-1;border-right:0}
+.cfg .wide:last-child{border-bottom:0}
+.cfg .v{font-size:14px;font-weight:500;overflow-wrap:anywhere}
+.subh{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.dlist{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px}
+.steps{margin:0;padding-left:20px;display:grid;gap:8px;font-size:14px}
+td.l{text-align:left;white-space:normal}
+/* Gmail */
+.gm{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.phone{background:#fff;border:1px solid var(--line);border-radius:22px;padding:14px;font-family:Arial,Helvetica,sans-serif;color:#202124;display:grid;gap:10px;align-content:start}
+.phone .bar{font-size:12px;color:#5F6368;display:flex;justify-content:space-between}
+.row{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;padding:10px 4px;border-bottom:1px solid #EEE}
+.row.ad{background:#F6F8FC;border-radius:10px;border-bottom:0}
+.av{width:40px;height:40px;border-radius:50%;background:#E8EAED;display:grid;place-items:center;font-size:13px;font-weight:700;color:#5F6368;overflow:hidden}
+.av.logo{background:#fff;border:1px solid #E0E0E0;color:#1E9E3E;font-size:15px}
+.row b{font-size:14px;display:block}
+.row .s{font-size:14px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .p{font-size:13px;color:#5F6368;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .spon{font-size:11px;font-weight:700;color:#202124;margin-right:6px}
+.open{display:grid;gap:10px}
+.open img{width:100%;border-radius:10px;display:block}
+.open .hd{display:flex;gap:10px;align-items:center}
+.open .t{font-size:18px;line-height:1.3}
+.open .d{font-size:14px;color:#3C4043;line-height:1.5}
+.cta{background:#0B57D0;color:#fff;border-radius:99px;padding:10px 18px;font-size:14px;font-weight:500;text-align:center}
+figcaption{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:8px}
+.pz{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;align-items:start}
+.pz figure{margin:0;display:grid;gap:8px}
+.pz img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.pz .cap{font-size:13px}
+.pz .cap b{display:block}
+.warn{border-left:4px solid #E3A008;background:#FFF8E1;color:#5B4300;border-radius:8px;padding:14px 16px;font-size:14px;line-height:1.5}
+.bud{width:100%}
+@media (max-width:760px){.cfg{grid-template-columns:1fr}.cfg>div{border-right:0}.gm{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="back" href="index.html">← Documentos RIS</a>
+<div class="brand"><i></i>ADCOM <span class="sep">×</span> RIS</div>
+<h1>Google Demand Gen · <span>Gmail</span></h1>
+<p>Implementación de la campaña de Demand Gen que lleva el anuncio de solicitud de crédito a la bandeja de entrada de Gmail, en el celular y en el computador. Usa las piezas y los textos que RIS envió el 13/11 y se financia con el presupuesto de Google de noviembre: Search cede una parte y el total del mes se mantiene en $3.000.000.</p>
+</header>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Resumen</div><h2>Implementación</h2></div>
+<div class="kpis">
+<div class="kpi"><b>Solo Gmail</b><span>Sin YouTube, Discover ni Display</span></div>
+<div class="kpi"><b>4 piezas</b><span>2 horizontales, 1 cuadrada y 1 vertical</span></div>
+<div class="kpi"><b>4 + 5</b><span>Títulos y descripciones que Google combina</span></div>
+<div class="kpi"><b>$35.000</b><span>Presupuesto diario de arranque</span></div>
+</div></section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Configuración</div><h2>Ficha técnica</h2></div>
+<div class="card cfg">
+<div class="wide"><span class="eyebrow">Campaña</span><span class="v">adcom_ris_gg_acq_dgen_gmail_solicitud-credito</span></div>
+<div><span class="eyebrow">Tipo</span><span class="v">Demand Gen · grupo con control de canal solo Gmail</span></div>
+<div><span class="eyebrow">Estado</span><span class="v">Creada · anuncio en revisión de Google</span></div>
+<div><span class="eyebrow">Estrategia de puja</span><span class="v">Maximizar clics (la cuenta aún no tiene conversiones)</span></div>
+<div><span class="eyebrow">Ubicación</span><span class="v">Colombia</span></div>
+<div><span class="eyebrow">Idioma</span><span class="v">Español</span></div>
+<div><span class="eyebrow">Edad</span><span class="v">25 años en adelante (RIS presta de 25 a 70)</span></div>
+<div><span class="eyebrow">Audiencia</span><span class="v">Personas que buscaron crédito en Google</span></div>
+<div><span class="eyebrow">Nombre y logo</span><span class="v">Crédito RIS · logo cuadrado de ris.com.co</span></div>
+<div><span class="eyebrow">Cuenta</span><span class="v">ADCOM - CREDITO EN RIS · 286-895-4991</span></div>
+<div class="wide"><span class="eyebrow">URL de destino</span><span class="v">https://ris.com.co/?utm_source=google&amp;utm_medium=demandgen&amp;utm_campaign=adcom_ris_gg_acq_dgen_gmail_solicitud-credito&amp;utm_content={creative}&amp;utm_id={campaignid}</span></div>
+</div></section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Preview</div><h2>Cómo se ve en Gmail</h2></div>
+<div class="gm">
+<figure style="margin:0"><div class="phone">
+<div class="bar"><span>Promociones</span><span>Celular</span></div>
+<div class="row ad"><div class="av logo">Ris</div><div><b>Crédito RIS</b><span class="s"><span class="spon">Anuncio</span>Solicita tu crédito digital hoy</span><span class="p">Simula tu crédito digital y conoce las opciones que RIS tiene para ti. ¡Solicita hoy!</span></div></div>
+<div class="row"><div class="av">T</div><div><b>Tienda</b><span class="s">Ofertas de la semana</span><span class="p">Descuentos en tecnología y hogar…</span></div></div>
+<div class="row"><div class="av">A</div><div><b>Aerolínea</b><span class="s">Tu próximo viaje</span><span class="p">Tarifas especiales por tiempo limitado…</span></div></div>
+</div><figcaption>Anuncio cerrado en la bandeja</figcaption></figure>
+<figure style="margin:0"><div class="phone open">
+<div class="hd"><div class="av logo">Ris</div><div><b style="font-size:14px">Crédito RIS</b><span style="font-size:12px;color:#5F6368;display:block">Anuncio</span></div></div>
+<div class="t">Solicita tu crédito digital hoy</div>
+<img src="assets/img/dgen-gmail/h1_verde.jpg" alt="Pieza horizontal: mujer con camisa verde celebra mirando el celular" loading="lazy">
+<div class="d">Simula tu crédito digital y conoce las opciones que RIS tiene para ti. ¡Solicita hoy!</div>
+<div class="cta">Solicitar ahora</div>
+</div><figcaption>Anuncio abierto · vista ilustrativa</figcaption></figure>
+</div></section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Material</div><h2>Piezas</h2></div>
+<div class="pz">
+<figure><img src="assets/img/dgen-gmail/h1_verde.jpg" alt="Horizontal, camisa verde" loading="lazy"><span class="cap"><b>Horizontal 1.91:1</b>1734 × 907 · Gmail y Discover</span></figure>
+<figure><img src="assets/img/dgen-gmail/h2_amarilla.jpg" alt="Horizontal, camisa amarilla" loading="lazy"><span class="cap"><b>Horizontal 1.91:1</b>1734 × 907 · Gmail y Discover</span></figure>
+<figure><img src="assets/img/dgen-gmail/sq1.jpg" alt="Cuadrada" loading="lazy"><span class="cap"><b>Cuadrada 1:1</b>1254 × 1254 · Gmail</span></figure>
+<figure><img src="assets/img/dgen-gmail/pt1.jpg" alt="Vertical" loading="lazy"><span class="cap"><b>Vertical 4:5</b>1122 × 1402 · Gmail en el celular</span></figure>
+</div>
+<div class="warn" style="margin-top:16px"><b>Riesgo de rechazo.</b> Las cuatro piezas tienen dibujado el botón «Simula tu crédito aquí», y la cuadrada y la vertical además una mano de cursor. Google no acepta botones que no funcionan dentro de la imagen y suele mostrar menos las imágenes con mucho texto encima. Si rechaza alguna, la reemplazamos por la misma foto sin botón, sin titular y sin logo. El anuncio ya tiene su propio botón «Solicitar ahora».</div>
+</section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Textos</div><h2>Títulos y descripciones</h2></div>
+<div class="table-wrap"><table><thead><tr><th>Elemento</th><th style="text-align:left">Texto</th><th>Caracteres</th></tr></thead><tbody>
+<tr><td>Nombre</td><td class="l">Crédito RIS</td><td>11 / 25</td></tr>
+<tr><td>Título 1</td><td class="l">Solicita tu crédito digital hoy</td><td>31 / 40</td></tr>
+<tr><td>Título 2</td><td class="l">Tu crédito digital empieza aquí</td><td>31 / 40</td></tr>
+<tr><td>Título 3</td><td class="l">¿Necesitas un crédito?</td><td>22 / 40</td></tr>
+<tr><td>Título 4</td><td class="l">RIS, crédito cerca de ti</td><td>24 / 40</td></tr>
+<tr><td>Descripción 1</td><td class="l">Simula tu crédito digital y conoce las opciones que RIS tiene para ti. ¡Solicita hoy!</td><td>85 / 90</td></tr>
+<tr><td>Descripción 2</td><td class="l">Tu próximo crédito está más cerca de ti. Solicítalo en línea con RIS.</td><td>69 / 90</td></tr>
+<tr><td>Descripción 3</td><td class="l">Simula tu crédito en RIS y solicita en línea.</td><td>45 / 90</td></tr>
+<tr><td>Descripción 4</td><td class="l">Conoce nuestras opciones de crédito digital y solicita hoy.</td><td>59 / 90</td></tr>
+<tr><td>Descripción 5</td><td class="l">Simula tu crédito desde donde estés y comienza tu solicitud.</td><td>60 / 90</td></tr>
+<tr><td>Botón</td><td class="l">Solicitar ahora</td><td>Lista de Google</td></tr>
+</tbody></table></div>
+<p class="note">Ajustes sobre la propuesta de RIS: el nombre «RIS | Crédito cerca de ti» pasa a «Crédito RIS», porque Google pide el nombre de la empresa y no un eslogan. El botón «Simula tu crédito aquí» no existe en Google, así que se eligió «Solicitar ahora» de su lista. El título largo se usa como descripción, porque Demand Gen no lo tiene. Y la URL va sin el parámetro <code>utm_source=chatgpt.com</code>, con la medición de la agencia.</p>
+</section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Segmentación</div><h2>Audiencia</h2></div>
+<div class="panel"><p class="note" style="max-width:none">Google muestra el anuncio a personas que buscaron estos términos (los mismos de la campaña de Search) y amplía a perfiles parecidos. El rango de edad es de 25 años en adelante, porque Google no permite cortar en 70.</p>
+<p style="font-size:14px;line-height:1.7">prestamo en linea · prestamos en linea · creditos en linea · credito digital · credito online · prestamos online · prestamo rapido · credito rapido · prestamo facil · prestamo libre inversion · credito libre inversion en linea · prestamos personales · prestamo personal en linea · credito para independientes · prestamos para independientes · credito ris</p></div>
+</section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Inversión</div><h2>Presupuesto de Google en noviembre</h2></div>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Concepto</th><th>Valor</th></tr></thead><tbody>
+<tr><td class="l">Presupuesto de Google en el flow</td><td>$3.000.000</td></tr>
+<tr><td class="l">Gastado en Search del 9 al 12 de noviembre</td><td>$560.730</td></tr>
+<tr><td class="l">Disponible del 13 al 30 de noviembre (18 días)</td><td>$2.439.270 · ≈ $135.500 diarios</td></tr>
+<tr><td class="l">Search: de $136.000 a</td><td>$100.000 diarios</td></tr>
+<tr><td class="l">Demand Gen Gmail</td><td>$35.000 diarios</td></tr>
+</tbody><tfoot><tr><td class="l">Total diario de Google</td><td>$135.000</td></tr></tfoot></table></div>
+<p class="note">Search sigue llevando la mayor parte porque capta a quien ya está buscando crédito. Gmail arranca con $35.000 diarios mientras Google aprende. Si en la primera semana el costo por solicitud de Gmail se parece al de Search, se le pasa más presupuesto, siempre dentro de los $3.000.000.</p>
+</section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Seguimiento</div><h2>Próximos pasos</h2></div>
+<div class="panel"><ol class="steps">
+<li>Revisar la aprobación del anuncio (16/11). Si Google rechaza piezas por el botón o el cursor, pedir a RIS versiones limpias.</li>
+<li>Crear las acciones de conversión en la cuenta nueva para pasar la puja de clics a solicitudes.</li>
+<li>Revisar después de 7 días los clics, el costo por clic y las solicitudes desde Gmail frente a Search, y ajustar el reparto.</li>
+<li>Completar la verificación de anunciante de Credintegral, que habilita el logo y el nombre en Search.</li>
+</ol></div></section>
+
+<footer>ADCOM · Configuración leída de la API de Google Ads el 13/11/2026.</footer>
+</div>
+</body>
+</html>
