@@ -49,6 +49,38 @@ figcaption{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:up
 .negs .panel h3{font-size:15px}
 .steps{margin:0;padding-left:20px;display:grid;gap:8px;font-size:14px}
 td.l{text-align:left;white-space:normal}
+
+.serp .fav.logo{background:#fff;border:1px solid #DADCE0;overflow:hidden}
+.serp .fav.logo img{width:100%;height:100%;object-fit:contain}
+.serp .sn{font-size:14px;color:#4D5156}
+.mock{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:20px;align-items:start}
+.phone{background:#141414;border-radius:30px;padding:12px}
+.phone .screen{background:#fff;border-radius:20px;overflow:hidden;padding:14px 14px 4px;display:grid;gap:10px;font-family:Arial,Helvetica,sans-serif}
+.phone .q{border:1px solid #DADCE0;border-radius:99px;padding:8px 14px;font-size:13px;color:#202124}
+.phone .serp{border:0;padding:0;border-radius:0}
+.phone .body{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:10px;align-items:start}
+.phone .body img{width:92px;height:92px;object-fit:cover;border-radius:8px}
+.phone .serp .hl{font-size:17px}
+.phone .serp .ds,.phone .serp .sn,.phone .serp .co{font-size:13px}
+.phone .slv{display:grid;margin-top:6px;border-top:1px solid #ECEDEF}
+.phone .slv span{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #ECEDEF;font-size:14px;color:#1A0DAB}
+.phone .slv span::after{content:"›";color:#70757A}
+.desk .serp{gap:6px}
+.desk .row{display:grid;grid-template-columns:minmax(0,1fr) 132px;gap:16px;align-items:start}
+.desk .row img{width:132px;height:69px;object-fit:cover;border-radius:8px}
+.desk .sld{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-top:8px}
+.desk .sld b{display:block;font-weight:400;font-size:15px;color:#1A0DAB}
+.desk .sld small{display:block;font-size:13px;color:#4D5156}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.gal figure{margin:0;display:grid;gap:6px}
+.gal img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.gal .sq img{aspect-ratio:1/1;object-fit:cover}
+.gal .ls img{aspect-ratio:1.91/1;object-fit:cover}
+.gal figcaption{text-align:left;text-transform:none;letter-spacing:0;font-weight:500;font-size:12px}
+.st{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 9px;border-radius:99px;white-space:nowrap}
+.st.ok{background:#E3F2E6;color:#1E7B34}.st.rev{background:var(--accent-soft);color:#7A5B00}.st.no{background:#FBE3E1;color:#A3271B}.st.lim{background:#EDEDEA;color:var(--muted)}
+.check .warn{width:22px;height:22px;border-radius:50%;background:#FBE3E1;color:#A3271B;display:grid;place-items:center;font-weight:700;font-size:13px}
+@media (max-width:760px){.mock{grid-template-columns:1fr}.desk .row{grid-template-columns:1fr}.desk .sld{grid-template-columns:1fr}}
 @media (max-width:760px){.card.ad{grid-template-columns:1fr}.cfg{grid-template-columns:1fr}.cfg>div{border-right:0}.check li{grid-template-columns:28px 1fr}.check li>span:last-child{grid-column:2}.serp .sls{grid-template-columns:1fr}}
 </style>
 </head>
@@ -58,27 +90,66 @@ td.l{text-align:left;white-space:normal}
 <a class="back" href="index.html">← Documentos RIS</a>
 <div class="brand"><i></i>ADCOM <span class="sep">×</span> RIS</div>
 <h1>Google Search · <span>solicitud de crédito</span></h1>
-<p>Implementación de la primera campaña de búsqueda de RIS en Google Ads. Está activa en la cuenta ADCOM - CREDITO EN RIS con $136.000 diarios, para cerrar noviembre en los $3.000.000 de Google del flow. Los anuncios llevan a ris.com.co, que ya publica el plazo, la tasa máxima y el ejemplo de costo que exige Google para anunciar préstamos personales.</p>
+<p>Implementación de la primera campaña de búsqueda de RIS en Google Ads. Está activa en la cuenta ADCOM - CREDITO EN RIS con $108.000 diarios desde el 18/11, para cerrar noviembre en los $2.400.000 que el flow ajustado le asigna a Search (los otros $600.000 de Google van a Demand Gen Gmail). El 18/11 Google aprobó la verificación de anunciante y se sumaron el logo, el nombre «Crédito RIS», un fragmento estructurado y 6 imágenes. Los anuncios llevan a ris.com.co, que ya publica el plazo, la tasa máxima y el ejemplo de costo que exige Google para anunciar préstamos personales.</p>
 </header>
 
 <section class="section"><div class="section-head"><div class="eyebrow">Resumen</div><h2>Implementación</h2></div>
 <div class="kpis">
 <div class="kpi"><b>5</b><span>Grupos de anuncios por tipo de búsqueda</span></div>
-<div class="kpi"><b>29</b><span>Palabras clave, en revisión de Google</span></div>
+<div class="kpi"><b>28</b><span>Palabras clave, todas aprobadas</span></div>
 <div class="kpi"><b>5 RSA</b><span>Un anuncio adaptable por grupo, 15 títulos y 4 descripciones</span></div>
-<div class="kpi"><b>$136.000</b><span>Presupuesto diario</span></div>
+<div class="kpi"><b>$108.000</b><span>Presupuesto diario desde el 18/11</span></div>
 </div></section>
+
+<section class="section"><div class="section-head"><div class="eyebrow">Actualización 18/11</div><h2>Cómo se ven los anuncios con las extensiones</h2></div>
+<p class="note">Con la verificación de anunciante aprobada, los anuncios muestran el logo y el nombre «Crédito RIS» en vez de solo la URL, y se sumaron un fragmento estructurado y 6 imágenes tomadas de ris.com.co. Ejemplo con el grupo Marca. Google decide en cada búsqueda qué extensiones muestra; no siempre salen todas juntas.</p>
+<div class="mock">
+<figure style="margin:0;display:grid;gap:8px"><div class="phone"><div class="screen">
+<div class="q">credito ris</div>
+<div class="serp">
+<span class="spon">Patrocinado</span>
+<div class="site"><span class="fav logo"><img src="assets/img/search-extensiones/logo.png" alt="Logo RIS"></span><div><b>Crédito RIS</b><small>ris.com.co</small></div></div>
+<div class="body"><div style="display:grid;gap:4px"><div class="hl">Crédito RIS Sitio Oficial | Crédito RIS 100% digital</div>
+<div class="ds">Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta.</div></div>
+<img src="assets/img/search-extensiones/s_mujer_rizos.jpg" alt="Imagen del anuncio"></div>
+<div class="sn">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</div>
+<div class="co">Tasa fija · Cuotas fijas · 100% digital</div>
+<div class="slv"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Documentos legales</span></div>
+</div></div></div><figcaption>Celular · vista ilustrativa</figcaption></figure>
+<figure class="desk" style="margin:0;display:grid;gap:8px"><div class="serp">
+<span class="spon">Patrocinado</span>
+<div class="site"><span class="fav logo"><img src="assets/img/search-extensiones/logo.png" alt="Logo RIS"></span><div><b>Crédito RIS</b><small>https://ris.com.co</small></div></div>
+<div class="row"><div style="display:grid;gap:4px"><div class="hl">Crédito RIS Sitio Oficial | Crédito RIS 100% digital | Solicita tu Crédito RIS</div>
+<div class="ds">Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta. Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</div>
+<div class="sn">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</div>
+<div class="co">Tasa fija · Cuotas fijas · 100% digital · Sin filas ni papeleo · Desembolso a tu cuenta</div></div>
+<img src="assets/img/search-extensiones/h_joven_audifonos.jpg" alt="Imagen del anuncio"></div>
+<div class="sld"><div><b>Preguntas frecuentes</b><small>Resuelve tus dudas · Antes de solicitar</small></div><div><b>Crédito Cupo Fijo</b><small>Monto, plazo y tasa fijos · Cuotas iguales cada mes</small></div><div><b>Quiénes somos</b><small>Conoce a RIS · Crédito digital</small></div><div><b>Documentos legales</b><small>ris.com.co/documentos-legales</small></div></div>
+</div><figcaption>Computador · vista ilustrativa</figcaption></figure>
+</div>
+<div class="panel"><h3 style="font-size:15px">Imágenes del anuncio · tomadas de ris.com.co</h3>
+<div class="gal">
+<figure class="ls"><img src="assets/img/search-extensiones/h_joven_audifonos.jpg" alt=""><figcaption>Horizontal · joven</figcaption></figure>
+<figure class="ls"><img src="assets/img/search-extensiones/h_mujer_mascota.jpg" alt=""><figcaption>Horizontal · mujer y mascota</figcaption></figure>
+<figure class="sq"><img src="assets/img/search-extensiones/s_mujer_rizos.jpg" alt=""><figcaption>Cuadrada · mujer</figcaption></figure>
+<figure class="sq"><img src="assets/img/search-extensiones/s_tendero.jpg" alt=""><figcaption>Cuadrada · tendero</figcaption></figure>
+<figure class="sq"><img src="assets/img/search-extensiones/s_familia.jpg" alt=""><figcaption>Cuadrada · familia</figcaption></figure>
+<figure class="sq"><img src="assets/img/search-extensiones/s_mujer_mascota.jpg" alt=""><figcaption>Cuadrada · mujer y mascota</figcaption></figure>
+</div>
+<p class="note">Las 6 están en revisión. Google pide imágenes sin gráficos superpuestos, así que las que tienen la mascota pueden salir rechazadas. Son fotos pequeñas de la página (entre 378 y 1.176 px): conviene que RIS comparta los originales en alta (1.200 px o más) y, si es posible, versiones sin mascota.</p></div>
+<p class="note">Resultados del 9 al 18 de noviembre, antes de las extensiones nuevas: 9.780 impresiones, 2.438 clics, CTR 24,9 %, CPC promedio $468 y $1.140.752 invertidos.</p>
+</section>
 
 <section class="section"><div class="section-head"><div class="eyebrow">Configuración</div><h2>Ficha técnica</h2></div>
 <div class="card cfg">
 <div class="wide"><span class="eyebrow">Campaña</span><span class="v">adcom_ris_gg_acq_search_solicitud-credito</span></div>
 <div><span class="eyebrow">Tipo</span><span class="v">Búsqueda · solo red de Google (sin socios ni Display)</span></div>
-<div><span class="eyebrow">Estado</span><span class="v">Activa · anuncios en revisión de Google</span></div>
+<div><span class="eyebrow">Estado</span><span class="v">Activa · 5 anuncios y 28 palabras clave aprobados</span></div>
 <div><span class="eyebrow">Estrategia de puja</span><span class="v">Maximizar clics · CPC máximo $3.000</span></div>
 <div><span class="eyebrow">Ubicación</span><span class="v">Colombia · personas que están en el país</span></div>
 <div><span class="eyebrow">Idioma</span><span class="v">Español</span></div>
 <div><span class="eyebrow">Edad</span><span class="v">18–24 excluido (RIS presta de 25 a 70 años)</span></div>
-<div><span class="eyebrow">Conversiones</span><span class="v">Solicitud de crédito y Compra (principales)</span></div>
+<div><span class="eyebrow">Conversiones</span><span class="v">Pendiente: la cuenta nueva aún no tiene acciones de conversión</span></div>
 <div><span class="eyebrow">Dispositivos</span><span class="v">Computador, celular y tablet sin ajustes</span></div>
 <div><span class="eyebrow">Cuenta</span><span class="v">ADCOM - CREDITO EN RIS · 286-895-4991</span></div>
 <div class="wide"><span class="eyebrow">URL de destino</span><span class="v">https://ris.com.co/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=adcom_ris_gg_acq_search_solicitud-credito&amp;utm_term={keyword}&amp;utm_content={adgroupid}</span></div>
@@ -96,73 +167,78 @@ td.l{text-align:left;white-space:normal}
 <section class="section"><div class="section-head"><div class="eyebrow">Preview</div><h2>Anuncios por grupo</h2></div><div class="list">
 <article class="card ad"><div class="media"><div class="serp">
 <span class="spon">Patrocinado</span>
-<div class="site"><span class="fav">RIS</span><div><b>RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
+<div class="site"><span class="fav logo"><img src="assets/img/search-extensiones/logo.png" alt="Logo RIS"></span><div><b>Crédito RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
 <div class="hl">Crédito en línea | Préstamo en línea | Crédito 100% en línea</div>
 <div class="ds">Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta. Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</div>
+<div class="sn">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</div>
 <div class="co">Tasa fija · Cuotas fijas · 100% digital · Sin filas ni papeleo</div>
-<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Contáctanos</span></div>
+<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Documentos legales</span></div>
 </div><figcaption>Vista ilustrativa · Google combina títulos y descripciones</figcaption></div>
-<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 9 palabras clave</div><h3>Crédito en línea</h3></div><span class="tag">En revisión</span></div>
+<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 9 palabras clave</div><h3>Crédito en línea</h3></div><span class="tag">Aprobado</span></div>
 <div class="subh">Palabras clave</div><ul class="chips"><li class="">credito online</li><li class="">prestamos online</li><li class="">prestamo en linea</li><li class="">prestamos en linea</li><li class="">creditos en linea</li><li class="">credito digital</li><li class="">credito digital</li><li class="">prestamos en linea seguros</li><li class="">creditos en linea confiables</li></ul>
 <div class="subh">15 títulos · los 3 resaltados son propios del grupo</div><ul class="chips"><li class="own">Crédito en línea</li><li class="own">Préstamo en línea</li><li class="own">Crédito 100% en línea</li><li class="">Pide tu crédito en línea</li><li class="">Todo desde tu celular</li><li class="">Sin filas ni papeleo</li><li class="">Cuotas fijas cada mes</li><li class="">Sabes cuánto pagas cada mes</li><li class="">Desembolso a tu cuenta</li><li class="">Proceso claro y sin vueltas</li><li class="">Solicítalo en pocos pasos</li><li class="">Para personas de 25 a 70 años</li><li class="">Tasa y cuotas fijas</li><li class="">Sin renovación automática</li><li class="">Crédito digital RIS</li></ul>
 <div class="subh">Descripciones</div><ol class="dlist"><li>Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta.</li><li>Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</li><li>Sin filas ni papeleo: completa tu solicitud en línea en pocos pasos. Entre 25 y 70 años.</li><li>Requisitos: cédula vigente, cuenta bancaria a tu nombre e ingresos desde 1 SMMLV.</li></ol>
 </div></article>
 <article class="card ad"><div class="media"><div class="serp">
 <span class="spon">Patrocinado</span>
-<div class="site"><span class="fav">RIS</span><div><b>RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
+<div class="site"><span class="fav logo"><img src="assets/img/search-extensiones/logo.png" alt="Logo RIS"></span><div><b>Crédito RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
 <div class="hl">Pide tu crédito fácil | Solicitud rápida y simple | Préstamo fácil de solicitar</div>
 <div class="ds">Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta. Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</div>
+<div class="sn">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</div>
 <div class="co">Tasa fija · Cuotas fijas · 100% digital · Sin filas ni papeleo</div>
-<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Contáctanos</span></div>
+<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Documentos legales</span></div>
 </div><figcaption>Vista ilustrativa · Google combina títulos y descripciones</figcaption></div>
-<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 6 palabras clave</div><h3>Rápido y fácil</h3></div><span class="tag">En revisión</span></div>
+<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 6 palabras clave</div><h3>Rápido y fácil</h3></div><span class="tag">Aprobado</span></div>
 <div class="subh">Palabras clave</div><ul class="chips"><li class="new">prestamo rapido</li><li class="new">prestamo facil</li><li class="new">credito rapido</li><li class="">creditos en linea rapidos</li><li class="">prestamos en linea rapidos</li><li class="">credito desembolso inmediato</li></ul>
 <div class="subh">15 títulos · los 3 resaltados son propios del grupo</div><ul class="chips"><li class="own">Pide tu crédito fácil</li><li class="own">Solicitud rápida y simple</li><li class="own">Préstamo fácil de solicitar</li><li class="">Pide tu crédito en línea</li><li class="">Todo desde tu celular</li><li class="">Sin filas ni papeleo</li><li class="">Cuotas fijas cada mes</li><li class="">Sabes cuánto pagas cada mes</li><li class="">Desembolso a tu cuenta</li><li class="">Proceso claro y sin vueltas</li><li class="">Solicítalo en pocos pasos</li><li class="">Para personas de 25 a 70 años</li><li class="">Tasa y cuotas fijas</li><li class="">Sin renovación automática</li><li class="">Crédito digital RIS</li></ul>
 <div class="subh">Descripciones</div><ol class="dlist"><li>Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta.</li><li>Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</li><li>Sin filas ni papeleo: completa tu solicitud en línea en pocos pasos. Entre 25 y 70 años.</li><li>Requisitos: cédula vigente, cuenta bancaria a tu nombre e ingresos desde 1 SMMLV.</li></ol>
 </div></article>
 <article class="card ad"><div class="media"><div class="serp">
 <span class="spon">Patrocinado</span>
-<div class="site"><span class="fav">RIS</span><div><b>RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
+<div class="site"><span class="fav logo"><img src="assets/img/search-extensiones/logo.png" alt="Logo RIS"></span><div><b>Crédito RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
 <div class="hl">Préstamo a cuotas fijas | Crédito de libre inversión | Préstamo personal en línea</div>
 <div class="ds">Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta. Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</div>
+<div class="sn">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</div>
 <div class="co">Tasa fija · Cuotas fijas · 100% digital · Sin filas ni papeleo</div>
-<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Contáctanos</span></div>
+<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Documentos legales</span></div>
 </div><figcaption>Vista ilustrativa · Google combina títulos y descripciones</figcaption></div>
-<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 6 palabras clave</div><h3>Cuotas y libre inversión</h3></div><span class="tag">En revisión</span></div>
+<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 6 palabras clave</div><h3>Cuotas y libre inversión</h3></div><span class="tag">Aprobado</span></div>
 <div class="subh">Palabras clave</div><ul class="chips"><li class="new">prestamos personales</li><li class="">prestamo libre inversion</li><li class="new">prestamo personal en linea</li><li class="">credito de libre inversion</li><li class="">credito libre inversion en linea</li><li class="">prestamos en linea a cuotas</li></ul>
 <div class="subh">15 títulos · los 3 resaltados son propios del grupo</div><ul class="chips"><li class="own">Préstamo a cuotas fijas</li><li class="own">Crédito de libre inversión</li><li class="own">Préstamo personal en línea</li><li class="">Pide tu crédito en línea</li><li class="">Todo desde tu celular</li><li class="">Sin filas ni papeleo</li><li class="">Cuotas fijas cada mes</li><li class="">Sabes cuánto pagas cada mes</li><li class="">Desembolso a tu cuenta</li><li class="">Proceso claro y sin vueltas</li><li class="">Solicítalo en pocos pasos</li><li class="">Para personas de 25 a 70 años</li><li class="">Tasa y cuotas fijas</li><li class="">Sin renovación automática</li><li class="">Crédito digital RIS</li></ul>
 <div class="subh">Descripciones</div><ol class="dlist"><li>Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta.</li><li>Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</li><li>Sin filas ni papeleo: completa tu solicitud en línea en pocos pasos. Entre 25 y 70 años.</li><li>Requisitos: cédula vigente, cuenta bancaria a tu nombre e ingresos desde 1 SMMLV.</li></ol>
 </div></article>
 <article class="card ad"><div class="media"><div class="serp">
 <span class="spon">Patrocinado</span>
-<div class="site"><span class="fav">RIS</span><div><b>RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
+<div class="site"><span class="fav logo"><img src="assets/img/search-extensiones/logo.png" alt="Logo RIS"></span><div><b>Crédito RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
 <div class="hl">Crédito para independientes | ¿Eres independiente? | Préstamo para independientes</div>
 <div class="ds">Independiente formal con 6 meses o informal con 12 meses de actividad. Solicítalo aquí. Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</div>
+<div class="sn">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</div>
 <div class="co">Tasa fija · Cuotas fijas · 100% digital · Sin filas ni papeleo</div>
-<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Contáctanos</span></div>
+<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Documentos legales</span></div>
 </div><figcaption>Vista ilustrativa · Google combina títulos y descripciones</figcaption></div>
-<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 3 palabras clave</div><h3>Independientes</h3></div><span class="tag">En revisión</span></div>
+<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 3 palabras clave</div><h3>Independientes</h3></div><span class="tag">Aprobado</span></div>
 <div class="subh">Palabras clave</div><ul class="chips"><li class="">prestamos para independientes</li><li class="">credito para independientes</li><li class="">credito libre inversion independientes</li></ul>
 <div class="subh">15 títulos · los 3 resaltados son propios del grupo</div><ul class="chips"><li class="own">Crédito para independientes</li><li class="own">¿Eres independiente?</li><li class="own">Préstamo para independientes</li><li class="">Pide tu crédito en línea</li><li class="">Todo desde tu celular</li><li class="">Sin filas ni papeleo</li><li class="">Cuotas fijas cada mes</li><li class="">Sabes cuánto pagas cada mes</li><li class="">Desembolso a tu cuenta</li><li class="">Proceso claro y sin vueltas</li><li class="">Solicítalo en pocos pasos</li><li class="">Para personas de 25 a 70 años</li><li class="">Tasa y cuotas fijas</li><li class="">Sin renovación automática</li><li class="">Crédito digital RIS</li></ul>
 <div class="subh">Descripciones</div><ol class="dlist"><li>Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta.</li><li>Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</li><li>Sin filas ni papeleo: completa tu solicitud en línea en pocos pasos. Entre 25 y 70 años.</li><li>Independiente formal con 6 meses o informal con 12 meses de actividad. Solicítalo aquí.</li></ol>
 </div></article>
 <article class="card ad"><div class="media"><div class="serp">
 <span class="spon">Patrocinado</span>
-<div class="site"><span class="fav">RIS</span><div><b>RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
+<div class="site"><span class="fav logo"><img src="assets/img/search-extensiones/logo.png" alt="Logo RIS"></span><div><b>Crédito RIS</b><small>ris.com.co/credito/en-linea</small></div></div>
 <div class="hl">Crédito RIS Sitio Oficial | Crédito RIS 100% digital | Solicita tu Crédito RIS</div>
 <div class="ds">Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta. Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</div>
+<div class="sn">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</div>
 <div class="co">Tasa fija · Cuotas fijas · 100% digital · Sin filas ni papeleo</div>
-<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Contáctanos</span></div>
+<div class="sls"><span>Preguntas frecuentes</span><span>Crédito Cupo Fijo</span><span>Quiénes somos</span><span>Documentos legales</span></div>
 </div><figcaption>Vista ilustrativa · Google combina títulos y descripciones</figcaption></div>
-<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 5 palabras clave</div><h3>Marca</h3></div><span class="tag">En revisión</span></div>
-<div class="subh">Palabras clave</div><ul class="chips"><li class="">credito ris</li><li class="">ris credito</li><li class="">credito ris</li><li class="">credito gana ris</li><li class="">credito ris gana</li></ul>
+<div class="meta"><div class="adhead"><div><div class="eyebrow">Grupo de anuncios · 4 palabras clave</div><h3>Marca</h3></div><span class="tag">Aprobado</span></div>
+<div class="subh">Palabras clave</div><ul class="chips"><li class="">credito ris</li><li class="">ris credito</li><li class="">credito ris</li><li class="">credito gana ris</li></ul>
 <div class="subh">15 títulos · los 3 resaltados son propios del grupo</div><ul class="chips"><li class="own">Crédito RIS Sitio Oficial</li><li class="own">Crédito RIS 100% digital</li><li class="own">Solicita tu Crédito RIS</li><li class="">Pide tu crédito en línea</li><li class="">Todo desde tu celular</li><li class="">Sin filas ni papeleo</li><li class="">Cuotas fijas cada mes</li><li class="">Sabes cuánto pagas cada mes</li><li class="">Desembolso a tu cuenta</li><li class="">Proceso claro y sin vueltas</li><li class="">Solicítalo en pocos pasos</li><li class="">Para personas de 25 a 70 años</li><li class="">Tasa y cuotas fijas</li><li class="">Sin renovación automática</li><li class="">Crédito digital RIS</li></ul>
 <div class="subh">Descripciones</div><ol class="dlist"><li>Solicita tu crédito digital RIS desde el celular. Cuotas fijas y desembolso a tu cuenta.</li><li>Con tasa y cuotas fijas sabes desde el inicio cuánto vas a pagar cada mes. Pide el tuyo.</li><li>Sin filas ni papeleo: completa tu solicitud en línea en pocos pasos. Entre 25 y 70 años.</li><li>Requisitos: cédula vigente, cuenta bancaria a tu nombre e ingresos desde 1 SMMLV.</li></ol>
 </div></article>
 </div><p class="note">Las palabras clave en amarillo son las 5 de préstamos personales que Google aprobó el 06/11, después del ajuste de la landing.</p></section>
 <section class="section"><div class="section-head"><div class="eyebrow">Segmentación</div><h2>Palabras clave</h2></div>
-<div class="table-wrap"><table><thead><tr><th>Grupo</th><th style="text-align:left">Palabra clave</th><th>Concordancia</th><th>Estado</th></tr></thead><tbody><tr class=""><td>Crédito en línea</td><td class="l">credito online</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamos online</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamo en linea</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamos en linea</td><td>Exacta</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">creditos en linea</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">credito digital</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">credito digital</td><td>Exacta</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamos en linea seguros</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Crédito en línea</td><td class="l">creditos en linea confiables</td><td>Frase</td><td>En revisión</td></tr><tr class="hi"><td>Rápido y fácil</td><td class="l">prestamo rapido</td><td>Frase</td><td>En revisión</td></tr><tr class="hi"><td>Rápido y fácil</td><td class="l">prestamo facil</td><td>Frase</td><td>En revisión</td></tr><tr class="hi"><td>Rápido y fácil</td><td class="l">credito rapido</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Rápido y fácil</td><td class="l">creditos en linea rapidos</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Rápido y fácil</td><td class="l">prestamos en linea rapidos</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Rápido y fácil</td><td class="l">credito desembolso inmediato</td><td>Frase</td><td>En revisión</td></tr><tr class="hi"><td>Cuotas y libre inversión</td><td class="l">prestamos personales</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">prestamo libre inversion</td><td>Frase</td><td>En revisión</td></tr><tr class="hi"><td>Cuotas y libre inversión</td><td class="l">prestamo personal en linea</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">credito de libre inversion</td><td>Exacta</td><td>En revisión</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">credito libre inversion en linea</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">prestamos en linea a cuotas</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Independientes</td><td class="l">prestamos para independientes</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Independientes</td><td class="l">credito para independientes</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Independientes</td><td class="l">credito libre inversion independientes</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Marca</td><td class="l">credito ris</td><td>Exacta</td><td>En revisión</td></tr><tr class=""><td>Marca</td><td class="l">ris credito</td><td>Exacta</td><td>En revisión</td></tr><tr class=""><td>Marca</td><td class="l">credito ris</td><td>Frase</td><td>En revisión</td></tr><tr class=""><td>Marca</td><td class="l">credito gana ris</td><td>Exacta</td><td>En revisión</td></tr><tr class=""><td>Marca</td><td class="l">credito ris gana</td><td>Frase</td><td>En revisión</td></tr></tbody>
-<tfoot><tr><td>Total</td><td class="l">29 palabras clave</td><td></td><td>En revisión</td></tr></tfoot></table></div>
+<div class="table-wrap"><table><thead><tr><th>Grupo</th><th style="text-align:left">Palabra clave</th><th>Concordancia</th><th>Estado</th></tr></thead><tbody><tr class=""><td>Crédito en línea</td><td class="l">credito online</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamos online</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamo en linea</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamos en linea</td><td>Exacta</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">creditos en linea</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">credito digital</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">credito digital</td><td>Exacta</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">prestamos en linea seguros</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Crédito en línea</td><td class="l">creditos en linea confiables</td><td>Frase</td><td>Aprobada</td></tr><tr class="hi"><td>Rápido y fácil</td><td class="l">prestamo rapido</td><td>Frase</td><td>Aprobada</td></tr><tr class="hi"><td>Rápido y fácil</td><td class="l">prestamo facil</td><td>Frase</td><td>Aprobada</td></tr><tr class="hi"><td>Rápido y fácil</td><td class="l">credito rapido</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Rápido y fácil</td><td class="l">creditos en linea rapidos</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Rápido y fácil</td><td class="l">prestamos en linea rapidos</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Rápido y fácil</td><td class="l">credito desembolso inmediato</td><td>Frase</td><td>Aprobada</td></tr><tr class="hi"><td>Cuotas y libre inversión</td><td class="l">prestamos personales</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">prestamo libre inversion</td><td>Frase</td><td>Aprobada</td></tr><tr class="hi"><td>Cuotas y libre inversión</td><td class="l">prestamo personal en linea</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">credito de libre inversion</td><td>Exacta</td><td>Aprobada</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">credito libre inversion en linea</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Cuotas y libre inversión</td><td class="l">prestamos en linea a cuotas</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Independientes</td><td class="l">prestamos para independientes</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Independientes</td><td class="l">credito para independientes</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Independientes</td><td class="l">credito libre inversion independientes</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Marca</td><td class="l">credito ris</td><td>Exacta</td><td>Aprobada</td></tr><tr class=""><td>Marca</td><td class="l">ris credito</td><td>Exacta</td><td>Aprobada</td></tr><tr class=""><td>Marca</td><td class="l">credito ris</td><td>Frase</td><td>Aprobada</td></tr><tr class=""><td>Marca</td><td class="l">credito gana ris</td><td>Exacta</td><td>Aprobada</td></tr></tbody>
+<tfoot><tr><td>Total</td><td class="l">28 palabras clave</td><td></td><td>Aprobadas</td></tr></tfoot></table></div>
 <p class="note">Concordancia de frase en las búsquedas genéricas y exacta en marca y en los términos más amplios, para no pagar búsquedas que no son de crédito.</p></section>
 <section class="section"><div class="section-head"><div class="eyebrow">Filtros</div><h2>Palabras clave negativas</h2></div><p class="note">39 negativas a nivel de campaña, para no aparecer en búsquedas de personas que RIS no puede aprobar o que buscan otro producto. El grupo Marca tiene 10 más, para no pagar por clientes que buscan pagar o consultar su crédito.</p><div class="negs">
 <div class="panel"><h3>Reportados en centrales</h3><ul class="chips"><li>reportado</li><li>reportados</li><li>datacredito</li><li>data credito</li><li>centrales de riesgo</li><li>sin buro</li><li>sin checar</li><li>sin reconocimiento facial</li><li>gota a gota</li></ul></div>
@@ -170,19 +246,21 @@ td.l{text-align:left;white-space:normal}
 <div class="panel"><h3>Competidores</h3><ul class="chips"><li>alkosto</li><li>alkomprar</li><li>20 minutos</li><li>rapicredit</li><li>rapi credit</li><li>lineru</li></ul></div>
 <div class="panel"><h3>Sin intención de crédito</h3><ul class="chips"><li>empleo</li><li>trabajo</li><li>gratis</li><li>que es</li><li>significado</li></ul></div>
 <div class="panel"><h3>Grupo Marca · clientes actuales</h3><ul class="chips"><li>certificado</li><li>extracto</li><li>iniciar sesion</li><li>pagar</li><li>pagos</li><li>paz y salvo</li><li>portal</li><li>pse</li><li>sucursal virtual</li><li>telefono</li></ul></div></div></section>
-<section class="section"><div class="section-head"><div class="eyebrow">Recursos</div><h2>Vínculos y textos destacados</h2></div>
-<div class="table-wrap"><table><thead><tr><th>Vínculo a sitio</th><th style="text-align:left">Descripción</th><th style="text-align:left">Destino</th></tr></thead><tbody>
-<tr><td>Preguntas frecuentes</td><td class="l">Resuelve tus dudas · Antes de solicitar</td><td class="l"><code>https://ris.com.co/preguntas-frecuentes/</code></td></tr><tr><td>Crédito Cupo Fijo</td><td class="l">Monto, plazo y tasa fijos · Cuotas iguales cada mes</td><td class="l"><code>https://ris.com.co/ris-cupo-fijo/</code></td></tr><tr><td>Quiénes somos</td><td class="l">Conoce a RIS · Crédito digital</td><td class="l"><code>https://ris.com.co/quienes-somos/</code></td></tr><tr><td>Contáctanos</td><td class="l">Línea 018000180089 · Escríbenos o llámanos</td><td class="l"><code>https://ris.com.co/contactenos/</code></td></tr>
-</tbody></table></div>
-<div class="panel"><h3 style="font-size:15px">Textos destacados</h3><ul class="chips"><li>Tasa fija</li><li>Cuotas fijas</li><li>100% digital</li><li>Sin filas ni papeleo</li><li>Desembolso a tu cuenta</li></ul></div></section>
+<section class="section"><div class="section-head"><div class="eyebrow">Recursos</div><h2>Extensiones y su estado</h2></div>
+<div class="table-wrap"><table><thead><tr><th style="text-align:left">Extensión</th><th style="text-align:left">Contenido</th><th>Estado al 18/11</th></tr></thead><tbody><tr><td class="l">Logo</td><td class="l">Logo de RIS 1:1</td><td><span class="st rev">En revisión</span></td></tr><tr><td class="l">Nombre de la empresa</td><td class="l">Crédito RIS</td><td><span class="st rev">En revisión</span></td></tr><tr><td class="l">Fragmento estructurado</td><td class="l">Servicios: Crédito 100% digital, Desembolso a tu cuenta, Cuotas fijas, Plazos de 3 a 6 meses, Solicita desde el celular</td><td><span class="st rev">En revisión</span></td></tr><tr><td class="l">Imágenes</td><td class="l">2 horizontales y 4 cuadradas de ris.com.co</td><td><span class="st rev">En revisión</span></td></tr><tr><td class="l">Vínculo · Preguntas frecuentes</td><td class="l">Resuelve tus dudas · Antes de solicitar</td><td><span class="st ok">Aprobado</span></td></tr><tr><td class="l">Vínculo · Crédito Cupo Fijo</td><td class="l">Monto, plazo y tasa fijos · Cuotas iguales cada mes</td><td><span class="st ok">Aprobado</span></td></tr><tr><td class="l">Vínculo · Quiénes somos</td><td class="l">Conoce a RIS · Crédito digital</td><td><span class="st ok">Aprobado</span></td></tr><tr><td class="l">Vínculo · Contáctanos</td><td class="l">Línea 018000180089 · Escríbenos o llámanos</td><td><span class="st no">Rechazado</span></td></tr><tr><td class="l">Textos destacados</td><td class="l">Tasa fija · Cuotas fijas · 100% digital · Sin filas ni papeleo · Desembolso a tu cuenta</td><td><span class="st ok">Aprobado</span></td></tr><tr><td class="l">Vínculos automáticos de Google (cuenta)</td><td class="l">Ris Cupo Rotativo · Contacte con nosotros · Documentos legales</td><td><span class="st ok">Aprobado</span></td></tr><tr><td class="l">Vínculo automático · Ris Cupo Fijo</td><td class="l">ris.com.co/ris-cupo-fijo</td><td><span class="st lim">Limitado</span></td></tr></tbody></table></div>
+<div class="panel"><ul class="check">
+<li><span class="warn">!</span><b>Contáctanos, rechazado</b><span>Google no permite números de teléfono en el texto del vínculo. La propuesta es reemplazarlo por «Contáctanos · Escríbenos por el formulario · Resolvemos tus dudas», sin número. No se usará extensión de llamada.</span></li>
+<li><span class="warn">!</span><b>Vínculos automáticos</b><span>Google creó 4 vínculos a nivel de cuenta a partir de la página. «Ris Cupo Rotativo» solo está disponible en Antioquia y la campaña sale en todo el país, así que se puede quitar si RIS lo prefiere. «Ris Cupo Fijo» sale limitado por la política de préstamos personales de alto costo.</span></li>
+</ul></div></section>
 <section class="section"><div class="section-head"><div class="eyebrow">Seguimiento</div><h2>Próximos pasos</h2></div>
 <div class="panel"><ol class="steps">
-<li><b>Primeras 48 horas:</b> revisar los términos de búsqueda reales y sumar negativas a lo que no sea intención de crédito.</li>
-<li><b>Primera semana:</b> comparar el CPC real con el tope de $3.000 y el costo por solicitud frente a Meta, para decidir si se pasa a una puja por conversiones.</li>
-<li><b>Medición:</b> las solicitudes llegan marcadas con utm_source=google, así se pueden cruzar con la base de RIS hasta el desembolso.</li>
+<li><b>20/11:</b> confirmar que Google aprobó el logo, el nombre, el fragmento y las imágenes, y revisar si pasaron las que tienen la mascota.</li>
+<li><b>Vínculo Contáctanos:</b> reemplazarlo por la versión sin teléfono.</li>
+<li><b>Fotos en alta:</b> pedir a RIS los originales de 1.200 px o más, idealmente sin mascota, para reemplazar las imágenes pequeñas.</li>
+<li><b>Medición:</b> crear las acciones de conversión en la cuenta nueva para medir solicitudes y pasar de Maximizar clics a una puja por conversiones.</li>
 <li><b>Fase 2:</b> evaluar una campaña de competidores, que hoy están como negativas.</li>
 </ol></div></section>
-<footer>ADCOM · Configuración y estados leídos de la API de Google Ads el 09/11/2026.</footer>
+<footer>ADCOM · Configuración y estados leídos de la API de Google Ads el 09/11/2026 y actualizados el 18/11/2026 (extensiones, presupuesto y resultados).</footer>
 </div>
 </body>
 </html>
